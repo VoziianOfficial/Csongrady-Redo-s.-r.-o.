@@ -3022,3 +3022,55 @@ textarea:focus-visible {
         font-size: 1rem !important;
     }
 }
+
+/* Fixed sticky header fix */
+
+.home-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 999 !important;
+    width: 100% !important;
+}
+
+.home-hero {
+    padding-top: 170px !important;
+}
+
+html {
+    scroll-padding-top: 120px;
+}
+
+@media (max-width: 920px) {
+    .home-hero {
+        padding-top: 140px !important;
+    }
+}
+
+@media (max-width: 460px) {
+    .home-hero {
+        padding-top: 125px !important;
+    }
+}
+
+/* Remove header background on scroll */
+
+.home-header,
+.home-header.is-scrolled {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+}
+
+.home-header.is-scrolled {
+    padding: 16px 0 !important;
+}
+
+.home-header__inner {
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.035)),
+        rgba(5, 6, 7, 0.54) !important;
+    backdrop-filter: blur(26px) !important;
+    box-shadow: var(--shadow-dark) !important;
+}
