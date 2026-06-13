@@ -1,0 +1,39 @@
+<svg width="64" height="64" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Csongrady Redo favicon</title>
+
+  <defs>
+    <linearGradient id="mintMain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#63E3DB"/>
+      <stop offset="100%" stop-color="#1FC3BE"/>
+    </linearGradient>
+
+    <linearGradient id="orangeMain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFBE7A"/>
+      <stop offset="100%" stop-color="#E46816"/>
+    </linearGradient>
+
+    <linearGradient id="glassMint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#63E3DB" stop-opacity="0.36"/>
+      <stop offset="100%" stop-color="#1FC3BE" stop-opacity="0.12"/>
+    </linearGradient>
+
+    <linearGradient id="glassOrange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFBE7A" stop-opacity="0.36"/>
+      <stop offset="100%" stop-color="#E46816" stop-opacity="0.12"/>
+    </linearGradient>
+
+    <filter id="shadow3d" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow3d)">
+    <path d="M78 97H120L106 158H64L78 97Z" fill="url(#glassMint)"/>
+    <path d="M142 97H184L170 158H128L142 97Z" fill="url(#glassOrange)"/>
+
+    <rect x="67" y="34" width="19" height="136" rx="2" fill="url(#mintMain)" transform="rotate(13 67 34)"/>
+    <rect x="100" y="86" width="14" height="66" rx="2" fill="url(#orangeMain)" transform="rotate(13 100 86)"/>
+    <rect x="133" y="86" width="19" height="136" rx="2" fill="url(#mintMain)" transform="rotate(13 133 86)"/>
+    <rect x="166" y="86" width="14" height="66" rx="2" fill="url(#orangeMain)" transform="rotate(13 166 86)"/>
+  </g>
+</svg>
