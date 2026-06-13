@@ -153,35 +153,16 @@ button {
 .legal-footer-logo {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
 }
 
-.legal-logo__mark,
-.legal-mobile-logo__mark,
-.legal-footer-logo__mark {
-    display: grid;
-    place-items: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 17px;
-    background:
-        radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.16), transparent 55%),
-        rgba(255, 255, 255, 0.07);
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.2),
-        0 16px 36px rgba(0, 0, 0, 0.32);
-}
 
-.legal-logo__mark svg,
-.legal-mobile-logo__mark svg,
-.legal-footer-logo__mark svg {
-    width: 42px;
-    height: 42px;
-}
+
+
 
 .legal-logo__text {
     display: grid;
-    line-height: 1.1;
+    align-content: center;
+    line-height: 1;
 }
 
 .legal-logo__text strong {
@@ -1089,16 +1070,7 @@ button:focus-visible {
         padding: 9px 10px 9px 12px;
     }
 
-    .legal-logo__mark {
-        width: 42px;
-        height: 42px;
-        border-radius: 15px;
-    }
 
-    .legal-logo__mark svg {
-        width: 37px;
-        height: 37px;
-    }
 
     .legal-logo__text strong {
         max-width: 130px;
@@ -1219,15 +1191,8 @@ button:focus-visible {
         gap: 8px;
     }
 
-    .legal-logo__mark {
-        width: 39px;
-        height: 39px;
-    }
 
-    .legal-logo__mark svg {
-        width: 34px;
-        height: 34px;
-    }
+ 
 
     .legal-logo__text strong {
         max-width: 112px;
@@ -1257,5 +1222,113 @@ button:focus-visible {
     .legal-contact-card a {
         width: 100%;
         overflow-wrap: anywhere;
+    }
+}
+
+.legal-logo__mark,
+.legal-mobile-logo__mark,
+.legal-footer-logo__mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+.legal-logo__mark svg {
+    width: 64px;
+    height: 64px;
+}
+
+.legal-mobile-logo__mark svg {
+    width: 64px;
+    height: 64px;
+}
+
+.legal-footer-logo__mark svg {
+    width: 68px;
+    height: 68px;
+}
+
+@media (max-width: 920px) {
+    .legal-logo__mark svg {
+        width: 56px;
+        height: 56px;
+    }
+
+    .legal-mobile-logo__mark svg {
+        width: 58px;
+        height: 58px;
+    }
+}
+
+@media (max-width: 460px) {
+    .legal-logo__mark svg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.legal-logo__text {
+    line-height: 0.95 !important;
+}
+
+.legal-logo__text strong {
+    font-size: 1.12rem !important;
+    letter-spacing: -0.045em !important;
+}
+
+.legal-logo__text small {
+    font-size: 0.82rem !important;
+    font-weight: 800 !important;
+}
+
+.legal-mobile-logo>span:last-child,
+.legal-footer-logo>span:last-child {
+    font-size: 1.15rem !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.045em !important;
+}
+
+@media (max-width: 920px) {
+
+    .legal-logo,
+    .legal-mobile-logo,
+    .legal-footer-logo {
+        gap: 6px !important;
+    }
+
+    .legal-logo__text strong {
+        font-size: 1.02rem !important;
+    }
+
+    .legal-logo__text small {
+        font-size: 0.76rem !important;
+    }
+
+    .legal-mobile-logo>span:last-child {
+        font-size: 1.08rem !important;
+    }
+}
+
+@media (max-width: 460px) {
+
+    .legal-logo,
+    .legal-mobile-logo {
+        gap: 5px !important;
+    }
+
+    .legal-logo__text strong {
+        font-size: 0.96rem !important;
+        max-width: none !important;
+    }
+
+    .legal-mobile-logo>span:last-child {
+        font-size: 1rem !important;
     }
 }

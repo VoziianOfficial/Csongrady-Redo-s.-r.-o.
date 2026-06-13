@@ -279,31 +279,9 @@ button {
 .service-footer-logo {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
 }
 
-.service-logo__mark,
-.service-mobile-logo__mark,
-.service-footer-logo__mark {
-    display: grid;
-    place-items: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 17px;
-    background:
-        radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.16), transparent 55%),
-        rgba(255, 255, 255, 0.07);
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.2),
-        0 16px 36px rgba(0, 0, 0, 0.32);
-}
 
-.service-logo__mark svg,
-.service-mobile-logo__mark svg,
-.service-footer-logo__mark svg {
-    width: 42px;
-    height: 42px;
-}
 
 .service-logo__text {
     display: grid;
@@ -2135,5 +2113,97 @@ textarea:focus-visible {
 
     .service-faq-item button {
         align-items: flex-start;
+    }
+}
+
+.service-logo__mark,
+.service-mobile-logo__mark,
+.service-footer-logo__mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+.service-logo__mark svg {
+    width: 64px;
+    height: 64px;
+}
+
+.service-mobile-logo__mark svg {
+    width: 64px;
+    height: 64px;
+}
+
+.service-footer-logo__mark svg {
+    width: 68px;
+    height: 68px;
+}
+
+/* Bigger logo text + smaller gap */
+
+
+.service-logo__text {
+    line-height: 0.95 !important;
+}
+
+.service-logo__text strong {
+    font-size: 1.12rem !important;
+    letter-spacing: -0.045em !important;
+}
+
+.service-logo__text small {
+    font-size: 0.82rem !important;
+    font-weight: 800 !important;
+}
+
+.service-mobile-logo>span:last-child,
+.service-footer-logo>span:last-child {
+    font-size: 1.15rem !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.045em !important;
+}
+
+@media (max-width: 920px) {
+
+    .service-logo,
+    .service-mobile-logo,
+    .service-footer-logo {
+        gap: 6px !important;
+    }
+
+    .service-logo__text strong {
+        font-size: 1.02rem !important;
+    }
+
+    .service-logo__text small {
+        font-size: 0.76rem !important;
+    }
+
+    .service-mobile-logo>span:last-child {
+        font-size: 1.08rem !important;
+    }
+}
+
+@media (max-width: 460px) {
+
+    .service-logo,
+    .service-mobile-logo {
+        gap: 5px !important;
+    }
+
+    .service-logo__text strong {
+        font-size: 0.96rem !important;
+        max-width: none !important;
+    }
+
+    .service-mobile-logo>span:last-child {
+        font-size: 1rem !important;
     }
 }

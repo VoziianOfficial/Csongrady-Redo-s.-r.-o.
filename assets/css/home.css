@@ -326,36 +326,7 @@ button {
     backdrop-filter: blur(26px);
 }
 
-.home-logo,
-.home-mobile-logo,
-.home-footer-logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-}
 
-.home-logo__mark,
-.home-mobile-logo__mark,
-.home-footer-logo__mark {
-    display: grid;
-    place-items: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 17px;
-    background:
-        radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.16), transparent 55%),
-        rgba(255, 255, 255, 0.07);
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.2),
-        0 16px 36px rgba(0, 0, 0, 0.32);
-}
-
-.home-logo__mark svg,
-.home-mobile-logo__mark svg,
-.home-footer-logo__mark svg {
-    width: 42px;
-    height: 42px;
-}
 
 .home-logo__text {
     display: grid;
@@ -2916,5 +2887,138 @@ textarea:focus-visible {
 
     .home-testimonials__slider {
         min-height: 470px;
+    }
+}
+
+/* Clean logo icon without background */
+
+.home-logo,
+.home-mobile-logo,
+.home-footer-logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+.home-logo__mark,
+.home-mobile-logo__mark,
+.home-footer-logo__mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+}
+
+.home-logo__mark svg {
+    width: 66px !important;
+    height: 66px !important;
+}
+
+.home-mobile-logo__mark svg {
+    width: 68px !important;
+    height: 68px !important;
+}
+
+.home-footer-logo__mark svg {
+    width: 72px !important;
+    height: 72px !important;
+}
+
+.home-logo__text {
+    display: grid;
+    align-content: center;
+    line-height: 1;
+}
+
+@media (max-width: 920px) {
+    .home-logo__mark svg {
+        width: 56px !important;
+        height: 56px !important;
+    }
+
+    .home-mobile-logo__mark svg {
+        width: 60px !important;
+        height: 60px !important;
+    }
+}
+
+@media (max-width: 460px) {
+    .home-logo__mark svg {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .home-mobile-logo__mark svg {
+        width: 56px !important;
+        height: 56px !important;
+    }
+}
+
+/* Bigger logo text + smaller gap */
+
+
+
+.home-logo__text {
+    line-height: 0.95 !important;
+}
+
+.home-logo__text strong {
+    font-size: 1.12rem !important;
+    letter-spacing: -0.045em !important;
+}
+
+.home-logo__text small {
+    font-size: 0.82rem !important;
+    font-weight: 800 !important;
+}
+
+.home-mobile-logo>span:last-child,
+.home-footer-logo>span:last-child {
+    font-size: 1.15rem !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.045em !important;
+}
+
+@media (max-width: 920px) {
+
+    .home-logo,
+    .home-mobile-logo,
+    .home-footer-logo {
+        gap: 6px !important;
+    }
+
+    .home-logo__text strong {
+        font-size: 1.02rem !important;
+    }
+
+    .home-logo__text small {
+        font-size: 0.76rem !important;
+    }
+
+    .home-mobile-logo>span:last-child {
+        font-size: 1.08rem !important;
+    }
+}
+
+@media (max-width: 460px) {
+
+    .home-logo,
+    .home-mobile-logo {
+        gap: 5px !important;
+    }
+
+    .home-logo__text strong {
+        font-size: 0.96rem !important;
+        max-width: none !important;
+    }
+
+    .home-mobile-logo>span:last-child {
+        font-size: 1rem !important;
     }
 }
