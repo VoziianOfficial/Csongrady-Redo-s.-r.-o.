@@ -3942,3 +3942,147 @@ html {
         font-size: 0.78rem;
     }
 }
+
+/* Clean black icon strip — only large icons */
+
+.home-icon-strip {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+    margin-top: -1px !important;
+    padding: 24px 0 34px !important;
+    background: #050607 !important;
+}
+
+.home-icon-strip::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -2 !important;
+    opacity: 0.16 !important;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px) !important;
+    background-size: 64px 64px !important;
+    mask-image: linear-gradient(90deg, transparent, black 18%, black 82%, transparent) !important;
+}
+
+.home-icon-strip::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -1 !important;
+    background:
+        radial-gradient(circle at 14% 50%, rgba(31, 195, 190, 0.12), transparent 20rem),
+        radial-gradient(circle at 86% 50%, rgba(228, 104, 22, 0.1), transparent 22rem) !important;
+    pointer-events: none !important;
+}
+
+.home-icon-strip__grid {
+    display: grid !important;
+    grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.home-icon-card {
+    position: relative !important;
+    min-height: 98px !important;
+    display: grid !important;
+    place-items: center !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    overflow: visible !important;
+    color: rgba(255, 255, 255, 0.72) !important;
+    transition:
+        transform 280ms ease,
+        color 280ms ease,
+        filter 280ms ease !important;
+}
+
+.home-icon-card::before,
+.home-icon-card::after,
+.home-icon-card strong,
+.home-icon-card em,
+.home-icon-card__icon {
+    display: none !important;
+}
+
+.home-icon-card svg {
+    width: clamp(58px, 5.2vw, 84px) !important;
+    height: clamp(58px, 5.2vw, 84px) !important;
+    overflow: visible !important;
+    transition:
+        transform 280ms ease,
+        filter 280ms ease,
+        opacity 280ms ease !important;
+}
+
+.home-icon-card svg path,
+.home-icon-card svg circle,
+.home-icon-card svg rect {
+    fill: none !important;
+    stroke: currentColor !important;
+    stroke-width: 2.25 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+}
+
+.home-icon-card:nth-child(odd):hover {
+    color: var(--color-mint-light) !important;
+    transform: translateY(-8px) rotate(-2deg) !important;
+    filter:
+        drop-shadow(0 0 14px rgba(99, 227, 219, 0.5)) drop-shadow(0 18px 26px rgba(31, 195, 190, 0.18)) !important;
+}
+
+.home-icon-card:nth-child(even):hover {
+    color: var(--color-orange-light) !important;
+    transform: translateY(-8px) rotate(2deg) !important;
+    filter:
+        drop-shadow(0 0 14px rgba(255, 190, 122, 0.5)) drop-shadow(0 18px 26px rgba(228, 104, 22, 0.18)) !important;
+}
+
+.home-icon-card:hover svg {
+    transform: scale(1.12) !important;
+}
+
+.home-icon-card:focus-visible {
+    outline: 2px solid rgba(99, 227, 219, 0.7) !important;
+    outline-offset: 8px !important;
+    border-radius: 18px !important;
+}
+
+@media (max-width: 980px) {
+    .home-icon-strip__grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        row-gap: 18px !important;
+    }
+
+    .home-icon-card {
+        min-height: 86px !important;
+    }
+}
+
+@media (max-width: 560px) {
+    .home-icon-strip {
+        padding: 20px 0 28px !important;
+    }
+
+    .home-icon-strip__grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .home-icon-card {
+        min-height: 68px !important;
+    }
+
+    .home-icon-card svg {
+        width: 44px !important;
+        height: 44px !important;
+    }
+}
