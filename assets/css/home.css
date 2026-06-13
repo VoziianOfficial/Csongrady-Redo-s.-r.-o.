@@ -6588,3 +6588,228 @@ html {
         margin-top: 16px !important;
     }
 }
+
+/* About section visual + benefits polish */
+
+.home-about__visual {
+    --about-photo-radius: 18px;
+
+    position: relative !important;
+    min-height: 540px !important;
+    border-radius: var(--about-photo-radius) !important;
+    overflow: visible !important;
+}
+
+.home-about__visual img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: var(--about-photo-radius) !important;
+    box-shadow:
+        0 30px 85px rgba(5, 6, 7, 0.18),
+        0 0 0 1px rgba(255, 255, 255, 0.38) inset !important;
+}
+
+/* внутренняя светлая рамка повторяет форму фото */
+.home-about__visual::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 16px !important;
+    z-index: 2 !important;
+    border: 1px solid rgba(255, 255, 255, 0.48) !important;
+    border-radius: calc(var(--about-photo-radius) - 4px) !important;
+    pointer-events: none !important;
+}
+
+/* линия теперь в правом верхнем углу и повторяет закругление */
+.home-about__line {
+    position: absolute !important;
+    top: 18px !important;
+    right: 18px !important;
+    z-index: 4 !important;
+    width: 132px !important;
+    height: 132px !important;
+    border-top: 3px solid var(--color-mint-light) !important;
+    border-right: 3px solid var(--color-orange-light) !important;
+    border-bottom: 0 !important;
+    border-left: 0 !important;
+    border-radius: 0 calc(var(--about-photo-radius) - 2px) 0 0 !important;
+    box-shadow:
+        18px -18px 34px rgba(31, 195, 190, 0.18),
+        0 0 28px rgba(255, 190, 122, 0.16) !important;
+    pointer-events: none !important;
+}
+
+.home-about__line::before,
+.home-about__line::after {
+    content: "";
+    position: absolute;
+    border-radius: 999px;
+    background: var(--gradient-mint);
+    box-shadow: 0 0 22px rgba(99, 227, 219, 0.65);
+}
+
+.home-about__line::before {
+    top: -6px;
+    left: -4px;
+    width: 10px;
+    height: 10px;
+}
+
+.home-about__line::after {
+    right: -6px;
+    bottom: -4px;
+    width: 10px;
+    height: 10px;
+    background: var(--gradient-orange);
+    box-shadow: 0 0 22px rgba(255, 190, 122, 0.65);
+}
+
+/* бейдж чуть аккуратнее под новое фото */
+.home-about__badge {
+    right: 22px !important;
+    bottom: 22px !important;
+    z-index: 5 !important;
+    border-radius: 16px !important;
+}
+
+/* Benefits: ниже по высоте, сочнее и с hover */
+.home-about__benefits {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    margin: 24px 0 28px !important;
+}
+
+.home-about__benefits span {
+    position: relative !important;
+    overflow: hidden !important;
+    min-height: 18px !important;
+    padding: 14px 14px 13px !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    border: 1px solid rgba(5, 6, 7, 0.1) !important;
+    border-radius: 16px !important;
+    color: var(--color-black) !important;
+    background:
+        radial-gradient(circle at 92% 12%, rgba(31, 195, 190, 0.14), transparent 6rem),
+        rgba(255, 255, 255, 0.72) !important;
+    box-shadow: 0 14px 34px rgba(5, 6, 7, 0.07) !important;
+    font-size: 0.82rem !important;
+    font-weight: 900 !important;
+    line-height: 1.12 !important;
+    transition:
+        transform 260ms ease,
+        border-color 260ms ease,
+        box-shadow 260ms ease,
+        background 260ms ease,
+        color 260ms ease !important;
+}
+
+.home-about__benefits span::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: var(--gradient-mint);
+    box-shadow: 0 0 18px rgba(99, 227, 219, 0.55);
+    transition:
+        transform 260ms ease,
+        box-shadow 260ms ease,
+        background 260ms ease;
+}
+
+.home-about__benefits span:nth-child(even)::before {
+    background: var(--gradient-orange);
+    box-shadow: 0 0 18px rgba(255, 190, 122, 0.5);
+}
+
+.home-about__benefits span:hover {
+    transform: translateY(-6px) !important;
+    border-color: rgba(31, 195, 190, 0.32) !important;
+    background:
+        radial-gradient(circle at 92% 12%, rgba(31, 195, 190, 0.24), transparent 7rem),
+        rgba(255, 255, 255, 0.88) !important;
+    box-shadow:
+        0 22px 52px rgba(5, 6, 7, 0.12),
+        0 0 30px rgba(31, 195, 190, 0.12) !important;
+}
+
+.home-about__benefits span:hover::before {
+    transform: scale(1.35);
+    box-shadow: 0 0 26px rgba(99, 227, 219, 0.75);
+}
+
+/* кнопка About — в стиле перехода к системе */
+.home-about .home-btn--dark {
+    min-height: 46px !important;
+    padding: 0 22px !important;
+    border-radius: 12px !important;
+    color: var(--color-white) !important;
+    background:
+        linear-gradient(135deg, rgba(5, 6, 7, 0.96), rgba(26, 29, 32, 0.96)) !important;
+    box-shadow:
+        0 18px 42px rgba(5, 6, 7, 0.2),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.12) !important;
+}
+
+.home-about .home-btn--dark:hover {
+    color: var(--color-black) !important;
+    background: var(--gradient-mint) !important;
+    box-shadow: 0 22px 50px rgba(31, 195, 190, 0.24) !important;
+}
+
+@media (max-width: 920px) {
+    .home-about__visual {
+        min-height: 430px !important;
+    }
+
+    .home-about__line {
+        width: 104px !important;
+        height: 104px !important;
+    }
+
+    .home-about__benefits {
+        grid-template-columns: 1fr !important;
+    }
+
+    .home-about__benefits span {
+        min-height: 58px !important;
+    }
+}
+
+@media (max-width: 520px) {
+    .home-about__visual {
+        --about-photo-radius: 16px;
+        min-height: 340px !important;
+    }
+
+    .home-about__visual::after {
+        inset: 10px !important;
+    }
+
+    .home-about__line {
+        top: 12px !important;
+        right: 12px !important;
+        width: 82px !important;
+        height: 82px !important;
+        border-width: 2px !important;
+    }
+
+    .home-about__badge {
+        right: 14px !important;
+        bottom: 14px !important;
+        width: min(230px, 72%) !important;
+        padding: 14px !important;
+    }
+
+    .home-about__benefits span {
+        min-height: 54px !important;
+        border-radius: 14px !important;
+    }
+}
