@@ -2609,3 +2609,242 @@ html {
     }
 }
 
+/* Service intro — compact cards with right icons */
+
+.service-intro {
+    padding: 64px 0 !important;
+}
+
+/* заголовок меньше и шире */
+.service-intro .service-section-heading {
+    max-width: 620px !important;
+}
+
+.service-intro .service-section-heading h2 {
+    max-width: 620px !important;
+    font-size: clamp(2rem, 3.6vw, 3.65rem) !important;
+    line-height: 0.94 !important;
+    letter-spacing: -0.068em !important;
+}
+
+.service-intro .service-section-heading p {
+    max-width: 560px !important;
+    font-size: 0.94rem !important;
+    line-height: 1.5 !important;
+}
+
+/* сетка компактнее */
+.service-intro__grid {
+    align-items: center !important;
+    gap: 42px !important;
+}
+
+.service-intro__items {
+    gap: 14px !important;
+}
+
+/* карточки ниже */
+.service-intro-card {
+    position: relative !important;
+    min-height: 138px !important;
+    padding: 22px 82px 22px 22px !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.66)),
+        rgba(255, 255, 255, 0.82) !important;
+    box-shadow:
+        0 16px 42px rgba(5, 6, 7, 0.07),
+        0 0 0 1px rgba(5, 6, 7, 0.07) inset !important;
+    transition:
+        transform 260ms ease,
+        box-shadow 260ms ease,
+        border-color 260ms ease,
+        background 260ms ease !important;
+}
+
+/* светящийся слой на hover */
+.service-intro-card::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: -1px !important;
+    z-index: 0 !important;
+    opacity: 0 !important;
+    background:
+        radial-gradient(circle at 82% 22%, rgba(31, 195, 190, 0.22), transparent 9rem),
+        radial-gradient(circle at 14% 92%, rgba(228, 104, 22, 0.12), transparent 10rem) !important;
+    transition: opacity 260ms ease !important;
+    pointer-events: none !important;
+}
+
+/* нижняя цветная линия */
+.service-intro-card::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 22px !important;
+    right: 22px !important;
+    bottom: 0 !important;
+    z-index: 2 !important;
+    height: 3px !important;
+    border-radius: 999px 999px 0 0 !important;
+    background: var(--gradient-mint) !important;
+    transform: scaleX(0) !important;
+    transform-origin: left !important;
+    transition: transform 280ms ease !important;
+}
+
+.service-intro-card:nth-child(even)::after {
+    background: var(--gradient-orange) !important;
+}
+
+.service-intro-card:hover {
+    transform: translateY(-6px) !important;
+    box-shadow:
+        0 24px 58px rgba(5, 6, 7, 0.11),
+        0 0 0 1px rgba(31, 195, 190, 0.2) inset !important;
+}
+
+.service-intro-card:hover::before {
+    opacity: 1 !important;
+}
+
+.service-intro-card:hover::after {
+    transform: scaleX(1) !important;
+}
+
+/* контент поверх glow */
+.service-intro-card h3,
+.service-intro-card p,
+.service-intro-card .service-line-icon {
+    position: relative !important;
+    z-index: 3 !important;
+}
+
+/* иконка справа сверху */
+.service-intro-card .service-line-icon {
+    position: absolute !important;
+    top: 18px !important;
+    right: 18px !important;
+    width: 46px !important;
+    height: 46px !important;
+    margin: 0 !important;
+    border-radius: 16px !important;
+    color: var(--color-black) !important;
+    background: var(--gradient-mint) !important;
+    box-shadow:
+        0 16px 32px rgba(31, 195, 190, 0.24),
+        0 0 0 1px rgba(255, 255, 255, 0.28) inset !important;
+    transition:
+        transform 260ms ease,
+        box-shadow 260ms ease,
+        border-radius 260ms ease !important;
+}
+
+.service-intro-card .service-line-icon--orange {
+    background: var(--gradient-orange) !important;
+    box-shadow:
+        0 16px 32px rgba(228, 104, 22, 0.22),
+        0 0 0 1px rgba(255, 255, 255, 0.28) inset !important;
+}
+
+.service-intro-card .service-line-icon svg {
+    width: 23px !important;
+    height: 23px !important;
+}
+
+.service-intro-card:hover .service-line-icon {
+    transform: translateY(-4px) rotate(-6deg) scale(1.04) !important;
+    border-radius: 50% !important;
+}
+
+.service-intro-card:nth-child(even):hover .service-line-icon {
+    transform: translateY(-4px) rotate(6deg) scale(1.04) !important;
+}
+
+/* текст компактнее */
+.service-intro-card h3 {
+    margin: 0 !important;
+    max-width: 260px !important;
+    font-size: 1.08rem !important;
+    line-height: 1 !important;
+    letter-spacing: -0.045em !important;
+}
+
+.service-intro-card p {
+    max-width: 310px !important;
+    margin: 10px 0 0 !important;
+    color: rgba(5, 6, 7, 0.58) !important;
+    font-size: 0.84rem !important;
+    line-height: 1.38 !important;
+}
+
+/* tablet */
+@media (max-width: 980px) {
+    .service-intro {
+        padding: 56px 0 !important;
+    }
+
+    .service-intro__grid {
+        gap: 28px !important;
+    }
+
+    .service-intro .service-section-heading {
+        max-width: 100% !important;
+        text-align: center !important;
+        margin-inline: auto !important;
+    }
+
+    .service-intro .service-section-heading h2,
+    .service-intro .service-section-heading p {
+        max-width: 760px !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+    }
+
+    .service-intro .service-kicker {
+        justify-content: center !important;
+    }
+
+    .service-intro-card {
+        min-height: 128px !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 560px) {
+    .service-intro {
+        padding: 46px 0 !important;
+    }
+
+    .service-intro .service-section-heading h2 {
+        font-size: clamp(1.7rem, 8vw, 2.55rem) !important;
+        line-height: 0.95 !important;
+    }
+
+    .service-intro__items {
+        gap: 10px !important;
+    }
+
+    .service-intro-card {
+        min-height: 124px !important;
+        padding: 18px 70px 18px 18px !important;
+        border-radius: 20px !important;
+    }
+
+    .service-intro-card .service-line-icon {
+        top: 16px !important;
+        right: 16px !important;
+        width: 42px !important;
+        height: 42px !important;
+        border-radius: 14px !important;
+    }
+
+    .service-intro-card h3 {
+        font-size: 1rem !important;
+    }
+
+    .service-intro-card p {
+        font-size: 0.8rem !important;
+        line-height: 1.34 !important;
+    }
+}
