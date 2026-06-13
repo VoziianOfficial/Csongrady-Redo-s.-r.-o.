@@ -417,6 +417,150 @@
         });
     };
 
+
+    const setupPopularServicesSlider = () => {
+        const slider = document.querySelector('[data-popular-slider]');
+        const track = document.querySelector('[data-popular-track]');
+        const prevButton = document.querySelector('[data-popular-prev]');
+        const nextButton = document.querySelector('[data-popular-next]');
+
+        if (!slider || !track || !prevButton || !nextButton) return;
+
+        const originalCards = Number(track.dataset.originalCards || 12);
+        const rows = 2;
+        const originalColumns = Math.ceil(originalCards / rows);
+
+        let activeColumn = 0;
+        let columnStep = 0;
+        let autoplayTimer = null;
+        let pointerStartX = 0;
+        let pointerCurrentX = 0;
+        let isDragging = false;
+
+        const setMetrics = () => {
+            const firstCard = track.querySelector('.home-popular-card');
+            if (!firstCard) return;
+
+            const trackStyles = window.getComputedStyle(track);
+            const gap = parseFloat(trackStyles.columnGap || trackStyles.gap || 0);
+
+            columnStep = firstCard.getBoundingClientRect().width + gap;
+            setPosition(false);
+        };
+
+        const setPosition = (animate = true) => {
+            track.style.transition = animate
+                ? 'transform 420ms cubic-bezier(.22, 1, .36, 1)'
+                : 'none';
+
+            track.style.transform = `translate3d(${-activeColumn * columnStep}px, 0, 0)`;
+        };
+
+        const nextSlide = () => {
+            activeColumn += 1;
+            setPosition(true);
+        };
+
+        const prevSlide = () => {
+            if (activeColumn <= 0) {
+                activeColumn = originalColumns;
+                setPosition(false);
+
+                requestAnimationFrame(() => {
+                    activeColumn = originalColumns - 1;
+                    setPosition(true);
+                });
+
+                return;
+            }
+
+            activeColumn -= 1;
+            setPosition(true);
+        };
+
+        const startAutoplay = () => {
+            stopAutoplay();
+            autoplayTimer = window.setInterval(nextSlide, 2800);
+        };
+
+        const stopAutoplay = () => {
+            if (!autoplayTimer) return;
+
+            window.clearInterval(autoplayTimer);
+            autoplayTimer = null;
+        };
+
+        track.addEventListener('transitionend', () => {
+            if (activeColumn >= originalColumns) {
+                activeColumn = 0;
+                setPosition(false);
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            stopAutoplay();
+            nextSlide();
+            startAutoplay();
+        });
+
+        prevButton.addEventListener('click', () => {
+            stopAutoplay();
+            prevSlide();
+            startAutoplay();
+        });
+
+        slider.addEventListener('pointerenter', stopAutoplay);
+        slider.addEventListener('pointerleave', startAutoplay);
+        slider.addEventListener('focusin', stopAutoplay);
+        slider.addEventListener('focusout', startAutoplay);
+
+        slider.addEventListener('pointerdown', (event) => {
+            isDragging = true;
+            pointerStartX = event.clientX;
+            pointerCurrentX = event.clientX;
+            stopAutoplay();
+
+            slider.setPointerCapture?.(event.pointerId);
+        });
+
+        slider.addEventListener('pointermove', (event) => {
+            if (!isDragging) return;
+
+            pointerCurrentX = event.clientX;
+        });
+
+        slider.addEventListener('pointerup', (event) => {
+            if (!isDragging) return;
+
+            isDragging = false;
+
+            const distance = pointerCurrentX - pointerStartX;
+
+            if (Math.abs(distance) > 44) {
+                if (distance < 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+
+            slider.releasePointerCapture?.(event.pointerId);
+            startAutoplay();
+        });
+
+        slider.addEventListener('pointercancel', () => {
+            isDragging = false;
+            startAutoplay();
+        });
+
+        window.addEventListener('resize', setMetrics);
+
+        setMetrics();
+        startAutoplay();
+    };
+
+
+
     const setupHashOnLoad = () => {
         if (!window.location.hash) return;
 
@@ -448,4 +592,5 @@
     setupContactForm();
     setupCookieBanner();
     setupHeroParallax();
+    setupPopularServicesSlider();
 })();
