@@ -5525,9 +5525,6 @@ html {
         gap: 12px;
     }
 
-    .home-why-signal__statement p {
-        font-size: clamp(1.5rem, 9vw, 2.35rem);
-    }
 
     .home-why-signal__core {
         width: min(100%, 310px);
@@ -5673,11 +5670,6 @@ html {
         url("../images/home/why-choose.jpg") center / cover no-repeat !important;
 }
 
-/* заголовок еще меньше и шире */
-.home-why-signal__top {
-    grid-template-columns: minmax(0, 1.38fr) minmax(260px, 0.5fr) !important;
-    gap: 30px !important;
-}
 
 .home-why-signal__top h2 {
     max-width: 1160px !important;
