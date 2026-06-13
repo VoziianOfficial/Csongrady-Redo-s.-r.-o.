@@ -6813,3 +6813,63 @@ html {
         border-radius: 14px !important;
     }
 }
+
+/* About benefits: one row on tablet and mobile */
+
+@media (max-width: 920px) {
+    .home-about__benefits {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+    }
+
+    .home-about__benefits span {
+        min-height: 12px !important;
+        padding: 12px 10px 11px !important;
+        border-radius: 14px !important;
+        font-size: 0.76rem !important;
+        line-height: 1.08 !important;
+    }
+
+    .home-about__benefits span::before {
+        top: 9px !important;
+        right: 9px !important;
+        width: 7px !important;
+        height: 7px !important;
+    }
+}
+
+@media (max-width: 520px) {
+    .home-about__benefits {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 7px !important;
+        margin: 20px 0 24px !important;
+    }
+
+    .home-about__benefits span {
+        min-height: 16px !important;
+        padding: 10px 8px 9px !important;
+        border-radius: 13px !important;
+        font-size: 0.66rem !important;
+        line-height: 1.08 !important;
+        letter-spacing: -0.01em !important;
+    }
+
+    .home-about__benefits span::before {
+        top: 8px !important;
+        right: 8px !important;
+        width: 6px !important;
+        height: 6px !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .home-about__benefits {
+        gap: 6px !important;
+    }
+
+    .home-about__benefits span {
+        min-height: 82px !important;
+        padding: 9px 6px 8px !important;
+        font-size: 0.6rem !important;
+    }
+}
