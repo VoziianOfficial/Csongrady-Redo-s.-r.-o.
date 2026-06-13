@@ -1587,34 +1587,6 @@ button {
     color: rgba(215, 220, 224, 0.72);
 }
 
-.service-footer__socials {
-    display: flex;
-    gap: 10px;
-    margin-top: 22px;
-}
-
-.service-footer__socials a {
-    display: grid;
-    place-items: center;
-    width: 42px;
-    height: 42px;
-    border: 1px solid var(--color-border);
-    border-radius: 999px;
-    color: var(--color-white);
-    background: rgba(255, 255, 255, 0.06);
-    font-size: 0.75rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    transition:
-        transform var(--transition),
-        background var(--transition);
-}
-
-.service-footer__socials a:hover {
-    transform: translateY(-3px);
-    background: rgba(255, 255, 255, 0.1);
-}
-
 .service-footer__column {
     display: grid;
     align-content: start;
