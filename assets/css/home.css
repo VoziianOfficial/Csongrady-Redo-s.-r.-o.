@@ -7265,3 +7265,21 @@ html {
         line-height: 0.92 !important;
     }
 }
+
+/* Home stats: reduce top padding by half */
+
+.home-stats {
+    padding-top: 46px !important;
+}
+
+@media (max-width: 920px) {
+    .home-stats {
+        padding-top: 38px !important;
+    }
+}
+
+@media (max-width: 520px) {
+    .home-stats {
+        padding-top: 32px !important;
+    }
+}
