@@ -5132,3 +5132,647 @@ html {
 .home-popular-viewport:hover .home-popular-track {
     animation-play-state: unset !important;
 }
+
+/* New WOW why section — black, bright, no photos, no cards, no numbers */
+
+.home-why--signal {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+    padding: 88px 0 78px !important;
+    background:
+        radial-gradient(circle at 14% 18%, rgba(31, 195, 190, 0.18), transparent 28rem),
+        radial-gradient(circle at 88% 72%, rgba(228, 104, 22, 0.17), transparent 30rem),
+        #050607 !important;
+}
+
+.home-why--signal::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    opacity: 0.16;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 66px 66px;
+    mask-image: radial-gradient(circle at 52% 42%, black, transparent 76%);
+}
+
+.home-why--signal::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        linear-gradient(115deg, transparent 0 42%, rgba(99, 227, 219, 0.08) 42% 43%, transparent 43%),
+        linear-gradient(64deg, transparent 0 58%, rgba(255, 190, 122, 0.08) 58% 59%, transparent 59%);
+    pointer-events: none;
+}
+
+.home-why-signal__glow {
+    position: absolute;
+    z-index: -1;
+    width: 360px;
+    height: 360px;
+    border-radius: 999px;
+    filter: blur(54px);
+    opacity: 0.65;
+    pointer-events: none;
+}
+
+.home-why-signal__glow--mint {
+    top: 6%;
+    left: -120px;
+    background: rgba(31, 195, 190, 0.34);
+}
+
+.home-why-signal__glow--orange {
+    right: -130px;
+    bottom: 10%;
+    background: rgba(228, 104, 22, 0.34);
+}
+
+.home-why-signal__top {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.62fr);
+    align-items: end;
+    gap: 42px;
+    margin-bottom: 54px;
+}
+
+.home-why--signal .home-kicker {
+    color: var(--color-orange-light) !important;
+}
+
+.home-why-signal__top h2 {
+    max-width: 900px;
+    margin: 0;
+    color: var(--color-white);
+    font-family: var(--font-display);
+    font-size: clamp(3.2rem, 7.4vw, 8rem);
+    line-height: 0.78;
+    letter-spacing: -0.095em;
+    text-transform: uppercase;
+}
+
+.home-why-signal__top h2::selection {
+    color: var(--color-black);
+    background: var(--color-orange-light);
+}
+
+.home-why-signal__top>p {
+    margin: 0 0 8px;
+    color: rgba(215, 220, 224, 0.68);
+    font-size: 1rem;
+    line-height: 1.58;
+}
+
+.home-why-signal__stage {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(300px, 0.82fr) minmax(0, 1.18fr);
+    align-items: center;
+    gap: 56px;
+}
+
+.home-why-signal__stage::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    right: 6%;
+    height: 2px;
+    background:
+        linear-gradient(90deg,
+            rgba(31, 195, 190, 0),
+            rgba(31, 195, 190, 0.9),
+            rgba(255, 190, 122, 0.9),
+            rgba(228, 104, 22, 0));
+    box-shadow:
+        0 0 24px rgba(31, 195, 190, 0.44),
+        0 0 32px rgba(228, 104, 22, 0.3);
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.home-why-signal__core {
+    position: relative;
+    width: min(100%, 430px);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    margin-inline: auto;
+    border-radius: 999px;
+    background:
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), transparent 28%),
+        radial-gradient(circle at 35% 32%, rgba(99, 227, 219, 0.42), transparent 28%),
+        radial-gradient(circle at 68% 72%, rgba(255, 190, 122, 0.32), transparent 28%),
+        rgba(255, 255, 255, 0.025);
+}
+
+.home-why-signal__core::before,
+.home-why-signal__core::after {
+    content: "";
+    position: absolute;
+    inset: 10%;
+    border-radius: inherit;
+    border: 1px solid rgba(99, 227, 219, 0.36);
+    animation: homeWhyOrbit 12s linear infinite;
+}
+
+.home-why-signal__core::after {
+    inset: 20%;
+    border-color: rgba(255, 190, 122, 0.34);
+    animation-direction: reverse;
+    animation-duration: 9s;
+}
+
+.home-why-signal__core span,
+.home-why-signal__core strong,
+.home-why-signal__core em {
+    position: absolute;
+    font-family: var(--font-display);
+    font-weight: 900;
+    line-height: 0.82;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+}
+
+.home-why-signal__core span {
+    top: 26%;
+    left: 14%;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: clamp(1.4rem, 3vw, 3rem);
+}
+
+.home-why-signal__core strong {
+    color: var(--color-mint-light);
+    font-size: clamp(3.2rem, 6vw, 6.4rem);
+    text-shadow: 0 0 34px rgba(99, 227, 219, 0.42);
+}
+
+.home-why-signal__core em {
+    right: 14%;
+    bottom: 25%;
+    color: var(--color-orange-light);
+    font-size: clamp(1.4rem, 3vw, 3rem);
+    font-style: normal;
+    text-shadow: 0 0 30px rgba(255, 190, 122, 0.34);
+}
+
+.home-why-signal__content {
+    position: relative;
+    z-index: 2;
+}
+
+.home-why-signal__statement {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 18px;
+    align-items: start;
+    margin-bottom: 30px;
+}
+
+.home-why-signal__statement span {
+    width: 16px;
+    height: 16px;
+    margin-top: 8px;
+    border-radius: 999px;
+    background: var(--gradient-mint);
+    box-shadow:
+        0 0 22px rgba(99, 227, 219, 0.9),
+        0 0 54px rgba(31, 195, 190, 0.4);
+}
+
+.home-why-signal__statement p {
+    margin: 0;
+    color: var(--color-white);
+    font-family: var(--font-display);
+    font-size: clamp(1.45rem, 2.7vw, 3rem);
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+}
+
+.home-why-signal__list {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.home-why-signal__list li {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(180px, 0.48fr) 1fr;
+    gap: 24px;
+    padding: 22px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.home-why-signal__list li:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.home-why-signal__list li::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, var(--color-mint-light), var(--color-orange-light));
+    box-shadow: 0 0 18px rgba(99, 227, 219, 0.4);
+    transition: width 320ms ease;
+}
+
+.home-why-signal__list li:hover::before {
+    width: 100%;
+}
+
+.home-why-signal__list strong {
+    color: var(--color-white);
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    line-height: 1;
+    letter-spacing: -0.045em;
+    text-transform: uppercase;
+    transition: color 260ms ease, transform 260ms ease;
+}
+
+.home-why-signal__list p {
+    margin: 0;
+    color: rgba(215, 220, 224, 0.66);
+    font-size: 0.94rem;
+    line-height: 1.55;
+    transition: color 260ms ease, transform 260ms ease;
+}
+
+.home-why-signal__list li:hover strong {
+    color: var(--color-mint-light);
+    transform: translateX(8px);
+}
+
+.home-why-signal__list li:nth-child(even):hover strong {
+    color: var(--color-orange-light);
+}
+
+.home-why-signal__list li:hover p {
+    color: rgba(255, 255, 255, 0.82);
+    transform: translateX(8px);
+}
+
+.home-why-signal__marquee {
+    overflow: hidden;
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.home-why-signal__marquee div {
+    display: flex;
+    width: max-content;
+    gap: 14px;
+    animation: homeWhyMarquee 34s linear infinite;
+}
+
+.home-why-signal__marquee span {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.74);
+    font-family: var(--font-display);
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    font-weight: 900;
+    letter-spacing: -0.055em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.home-why-signal__marquee span::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: var(--gradient-orange);
+    box-shadow: 0 0 22px rgba(255, 190, 122, 0.65);
+}
+
+.home-why-signal__marquee span:nth-child(even)::before {
+    background: var(--gradient-mint);
+    box-shadow: 0 0 22px rgba(99, 227, 219, 0.65);
+}
+
+@keyframes homeWhyOrbit {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.04);
+    }
+
+    to {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes homeWhyMarquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 980px) {
+
+    .home-why-signal__top,
+    .home-why-signal__stage {
+        grid-template-columns: 1fr;
+    }
+
+    .home-why-signal__stage::before {
+        display: none;
+    }
+
+    .home-why-signal__core {
+        width: min(100%, 360px);
+    }
+}
+
+@media (max-width: 620px) {
+    .home-why--signal {
+        padding: 62px 0 58px !important;
+    }
+
+    .home-why-signal__top h2 {
+        font-size: clamp(2.6rem, 16vw, 4.2rem);
+        line-height: 0.84;
+    }
+
+    .home-why-signal__list li {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 19px 0;
+    }
+
+    .home-why-signal__statement {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .home-why-signal__statement p {
+        font-size: clamp(1.5rem, 9vw, 2.35rem);
+    }
+
+    .home-why-signal__core {
+        width: min(100%, 310px);
+    }
+}
+
+/* Why signal section refinements */
+
+.home-why-signal__top {
+    grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.55fr) !important;
+    gap: 34px !important;
+    margin-bottom: 46px !important;
+}
+
+.home-why-signal__top h2 {
+    max-width: 1080px !important;
+    font-size: clamp(2.7rem, 5.8vw, 6.4rem) !important;
+    line-height: 0.84 !important;
+    letter-spacing: -0.085em !important;
+}
+
+.home-why-signal__top>p {
+    max-width: 440px !important;
+}
+
+/* поднять светящуюся линию выше */
+.home-why-signal__stage::before {
+    top: 35% !important;
+    left: 18% !important;
+    right: 4% !important;
+    height: 2px !important;
+}
+
+/* сам круг — живой, вращается и реагирует на hover */
+.home-why-signal__core {
+    cursor: pointer;
+    animation: homeWhyCoreFloat 7s ease-in-out infinite;
+    transition:
+        transform 360ms ease,
+        filter 360ms ease,
+        background 360ms ease,
+        box-shadow 360ms ease !important;
+}
+
+.home-why-signal__core::before {
+    animation: homeWhyOrbit 8s linear infinite !important;
+}
+
+.home-why-signal__core::after {
+    animation: homeWhyOrbit 5.5s linear infinite reverse !important;
+}
+
+.home-why-signal__core:hover {
+    transform: translateY(-10px) scale(1.04) rotate(-2deg);
+    filter:
+        drop-shadow(0 0 28px rgba(99, 227, 219, 0.34)) drop-shadow(0 0 42px rgba(228, 104, 22, 0.22));
+    background:
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.14), transparent 30%),
+        radial-gradient(circle at 34% 28%, rgba(99, 227, 219, 0.55), transparent 30%),
+        radial-gradient(circle at 70% 74%, rgba(255, 190, 122, 0.45), transparent 30%),
+        rgba(255, 255, 255, 0.035) !important;
+}
+
+.home-why-signal__core:hover::before {
+    border-color: rgba(99, 227, 219, 0.72) !important;
+    box-shadow:
+        0 0 32px rgba(99, 227, 219, 0.34),
+        inset 0 0 28px rgba(99, 227, 219, 0.12);
+    animation-duration: 3.8s !important;
+}
+
+.home-why-signal__core:hover::after {
+    border-color: rgba(255, 190, 122, 0.68) !important;
+    box-shadow:
+        0 0 32px rgba(255, 190, 122, 0.28),
+        inset 0 0 28px rgba(255, 190, 122, 0.1);
+    animation-duration: 3.2s !important;
+}
+
+.home-why-signal__core:hover strong {
+    color: var(--color-white) !important;
+    text-shadow:
+        0 0 22px rgba(99, 227, 219, 0.75),
+        0 0 48px rgba(99, 227, 219, 0.35);
+}
+
+.home-why-signal__core:hover span {
+    color: var(--color-mint-light) !important;
+}
+
+.home-why-signal__core:hover em {
+    color: var(--color-orange-light) !important;
+}
+
+@keyframes homeWhyCoreFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    35% {
+        transform: translateY(-8px) rotate(1.6deg);
+    }
+
+    70% {
+        transform: translateY(4px) rotate(-1.4deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@media (max-width: 980px) {
+    .home-why-signal__top {
+        grid-template-columns: 1fr !important;
+    }
+
+    .home-why-signal__top h2 {
+        max-width: 920px !important;
+    }
+}
+
+@media (max-width: 620px) {
+    .home-why-signal__top h2 {
+        font-size: clamp(2.25rem, 13vw, 3.55rem) !important;
+        line-height: 0.88 !important;
+    }
+
+    .home-why-signal__core:hover {
+        transform: translateY(-6px) scale(1.025) rotate(-1deg);
+    }
+}
+
+/* Why section final refinements */
+
+/* фото на всю секцию + сильное затемнение */
+.home-why--signal {
+    background:
+        radial-gradient(circle at 14% 18%, rgba(31, 195, 190, 0.24), transparent 28rem),
+        radial-gradient(circle at 88% 72%, rgba(228, 104, 22, 0.22), transparent 30rem),
+        linear-gradient(90deg, rgba(5, 6, 7, 0.96), rgba(5, 6, 7, 0.82)),
+        linear-gradient(180deg, rgba(5, 6, 7, 0.72), rgba(5, 6, 7, 0.94)),
+        url("../images/home/why-choose.jpg") center / cover no-repeat !important;
+}
+
+/* заголовок еще меньше и шире */
+.home-why-signal__top {
+    grid-template-columns: minmax(0, 1.38fr) minmax(260px, 0.5fr) !important;
+    gap: 30px !important;
+}
+
+.home-why-signal__top h2 {
+    max-width: 1160px !important;
+    font-size: clamp(2.25rem, 4.7vw, 5.25rem) !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.078em !important;
+}
+
+.home-why-signal__top>p {
+    max-width: 410px !important;
+    font-size: 0.95rem !important;
+}
+
+/* core сам не должен прыгать/увеличиваться на hover */
+.home-why-signal__core {
+    cursor: default !important;
+    animation: homeWhyCoreSoftRotate 14s ease-in-out infinite !important;
+    transition: none !important;
+}
+
+.home-why-signal__core:hover {
+    transform: none !important;
+    filter: none !important;
+    background:
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), transparent 28%),
+        radial-gradient(circle at 35% 32%, rgba(99, 227, 219, 0.42), transparent 28%),
+        radial-gradient(circle at 68% 72%, rgba(255, 190, 122, 0.32), transparent 28%),
+        rgba(255, 255, 255, 0.025) !important;
+}
+
+/* hover только на круговые линии */
+.home-why-signal__core::before,
+.home-why-signal__core::after {
+    pointer-events: auto !important;
+    transition:
+        inset 320ms ease,
+        border-color 320ms ease,
+        box-shadow 320ms ease,
+        opacity 320ms ease !important;
+}
+
+.home-why-signal__core:hover::before {
+    inset: 7% !important;
+    border-color: rgba(99, 227, 219, 0.82) !important;
+    box-shadow:
+        0 0 34px rgba(99, 227, 219, 0.42),
+        inset 0 0 34px rgba(99, 227, 219, 0.14) !important;
+    animation-duration: 3.6s !important;
+}
+
+.home-why-signal__core:hover::after {
+    inset: 17% !important;
+    border-color: rgba(255, 190, 122, 0.78) !important;
+    box-shadow:
+        0 0 34px rgba(255, 190, 122, 0.36),
+        inset 0 0 34px rgba(255, 190, 122, 0.13) !important;
+    animation-duration: 3s !important;
+}
+
+/* текст внутри не меняется на hover всего блока */
+.home-why-signal__core:hover strong {
+    color: var(--color-mint-light) !important;
+    text-shadow: 0 0 34px rgba(99, 227, 219, 0.42) !important;
+}
+
+.home-why-signal__core:hover span {
+    color: rgba(255, 255, 255, 0.72) !important;
+}
+
+.home-why-signal__core:hover em {
+    color: var(--color-orange-light) !important;
+}
+
+/* мягкое движение самого круга без hover-прыжка */
+@keyframes homeWhyCoreSoftRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    35% {
+        transform: rotate(1.2deg);
+    }
+
+    70% {
+        transform: rotate(-1.2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media (max-width: 620px) {
+    .home-why-signal__top h2 {
+        font-size: clamp(2rem, 11.5vw, 3.2rem) !important;
+        line-height: 0.92 !important;
+    }
+}
