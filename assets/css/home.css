@@ -4086,3 +4086,226 @@ html {
         height: 44px !important;
     }
 }
+
+/* Services intro cards: smaller height, right icons, stronger hover */
+
+.home-services-intro {
+    padding: 58px 0 !important;
+}
+
+.home-services-intro__items {
+    gap: 14px !important;
+}
+
+.home-intro-item {
+    position: relative !important;
+    overflow: hidden !important;
+    min-height: 132px !important;
+    padding: 22px 88px 20px 22px !important;
+    border-radius: 24px !important;
+    background:
+        radial-gradient(circle at 92% 12%, rgba(31, 195, 190, 0.16), transparent 7rem),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.62)),
+        rgba(255, 255, 255, 0.76) !important;
+    box-shadow:
+        0 15px 38px rgba(5, 6, 7, 0.07),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+    transition:
+        transform 260ms ease,
+        border-color 260ms ease,
+        box-shadow 260ms ease,
+        background 260ms ease !important;
+}
+
+.home-intro-item::before {
+    content: "";
+    position: absolute;
+    right: -32px;
+    bottom: -42px;
+    width: 110px;
+    height: 110px;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(31, 195, 190, 0.22), transparent 68%);
+    opacity: 0;
+    transition: opacity 260ms ease;
+}
+
+.home-intro-item::after {
+    content: "↗";
+    position: absolute;
+    right: 22px;
+    bottom: 18px;
+    color: rgba(5, 6, 7, 0.28);
+    font-size: 0.9rem;
+    font-weight: 900;
+    opacity: 0;
+    transform: translate(-4px, 4px);
+    transition:
+        opacity 260ms ease,
+        transform 260ms ease,
+        color 260ms ease;
+}
+
+.home-line-icon {
+    position: absolute !important;
+    top: 18px !important;
+    right: 18px !important;
+    width: 54px !important;
+    height: 54px !important;
+    margin: 0 !important;
+    border-radius: 18px !important;
+    transform-origin: center;
+    transition:
+        transform 260ms ease,
+        box-shadow 260ms ease,
+        background 260ms ease !important;
+}
+
+.home-line-icon svg {
+    width: 28px !important;
+    height: 28px !important;
+}
+
+.home-intro-item h3 {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-right: 6px !important;
+    font-size: 1.08rem !important;
+    line-height: 1.05 !important;
+    transition:
+        color 260ms ease,
+        transform 260ms ease !important;
+}
+
+.home-intro-item p {
+    max-width: 100% !important;
+    margin: 8px 0 0 !important;
+    color: rgba(5, 6, 7, 0.56) !important;
+    font-size: 0.88rem !important;
+    line-height: 1.45 !important;
+    transition:
+        color 260ms ease,
+        transform 260ms ease !important;
+}
+
+.home-intro-item:hover {
+    transform: translateY(-7px) !important;
+    border-color: rgba(31, 195, 190, 0.34) !important;
+    background:
+        radial-gradient(circle at 92% 12%, rgba(31, 195, 190, 0.25), transparent 8rem),
+        linear-gradient(145deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.72)),
+        rgba(255, 255, 255, 0.9) !important;
+    box-shadow:
+        0 26px 65px rgba(5, 6, 7, 0.12),
+        0 0 38px rgba(31, 195, 190, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+}
+
+.home-intro-item:hover::before {
+    opacity: 1;
+}
+
+.home-intro-item:hover::after {
+    opacity: 1;
+    transform: translate(0, 0);
+    color: var(--color-black);
+}
+
+.home-intro-item:hover h3 {
+    color: #087d78 !important;
+    transform: translateY(-2px);
+}
+
+.home-intro-item:hover p {
+    color: rgba(5, 6, 7, 0.68) !important;
+}
+
+.home-intro-item:hover .home-line-icon {
+    transform: scale(1.08) rotate(-5deg);
+    box-shadow:
+        0 22px 48px rgba(31, 195, 190, 0.28),
+        0 0 26px rgba(31, 195, 190, 0.18) !important;
+}
+
+.home-intro-item:nth-child(even) {
+    background:
+        radial-gradient(circle at 92% 12%, rgba(228, 104, 22, 0.13), transparent 7rem),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.62)),
+        rgba(255, 255, 255, 0.76) !important;
+}
+
+.home-intro-item:nth-child(even):hover {
+    border-color: rgba(228, 104, 22, 0.32) !important;
+    background:
+        radial-gradient(circle at 92% 12%, rgba(228, 104, 22, 0.22), transparent 8rem),
+        linear-gradient(145deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.72)),
+        rgba(255, 255, 255, 0.9) !important;
+    box-shadow:
+        0 26px 65px rgba(5, 6, 7, 0.12),
+        0 0 38px rgba(228, 104, 22, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+}
+
+.home-intro-item:nth-child(even):hover h3 {
+    color: var(--color-carrot) !important;
+}
+
+.home-intro-item:nth-child(even):hover .home-line-icon {
+    transform: scale(1.08) rotate(5deg);
+    box-shadow:
+        0 22px 48px rgba(228, 104, 22, 0.24),
+        0 0 26px rgba(228, 104, 22, 0.14) !important;
+}
+
+@media (max-width: 980px) {
+    .home-services-intro {
+        padding: 52px 0 !important;
+    }
+
+    .home-services-intro__grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+
+    .home-intro-item {
+        min-height: 126px !important;
+    }
+}
+
+@media (max-width: 620px) {
+    .home-services-intro__items {
+        grid-template-columns: 1fr !important;
+    }
+
+    .home-intro-item {
+        min-height: 118px !important;
+        padding: 20px 78px 18px 20px !important;
+        border-radius: 22px !important;
+    }
+
+    .home-line-icon {
+        width: 48px !important;
+        height: 48px !important;
+        top: 16px !important;
+        right: 16px !important;
+    }
+
+    .home-line-icon svg {
+        width: 25px !important;
+        height: 25px !important;
+    }
+}
+
+/* Services intro heading smaller */
+
+.home-services-intro .home-section-heading h2 {
+    font-size: clamp(1.8rem, 3.2vw, 3.35rem) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.055em !important;
+}
+
+@media (max-width: 620px) {
+    .home-services-intro .home-section-heading h2 {
+        font-size: clamp(1.75rem, 9vw, 2.55rem) !important;
+    }
+}
