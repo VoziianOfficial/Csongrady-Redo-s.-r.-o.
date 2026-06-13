@@ -3185,11 +3185,11 @@ html {
 
 .home-hero__image {
     position: absolute !important;
-    right: 20px !important;
+    right: 45px !important;
     bottom: 0 !important;
     z-index: 2 !important;
     width: min(82%, 360px) !important;
-    height: 410px !important;
+    height: 440px !important;
     object-fit: cover !important;
     object-position: center bottom !important;
     border: 0 !important;
@@ -3342,7 +3342,8 @@ html {
 
     .home-hero__image {
         width: min(88%, 270px) !important;
-        height: 315px !important;
+        height: 335px !important;
+        right: 62px !important;
     }
 }
 
