@@ -8993,3 +8993,100 @@ html {
         letter-spacing: 0.11em !important;
     }
 }
+
+/* Why section — background photo through CSS */
+
+.home-why--signal {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 6, 7, 0.94) 0%,
+            rgba(5, 6, 7, 0.84) 42%,
+            rgba(5, 6, 7, 0.68) 100%
+        ),
+        radial-gradient(circle at 18% 24%, rgba(31, 195, 190, 0.24), transparent 26rem),
+        radial-gradient(circle at 88% 78%, rgba(228, 104, 22, 0.2), transparent 28rem),
+        url("../images/home/stats-bg.jpg") center / cover no-repeat !important;
+}
+
+/* мягкая затемняющая вуаль поверх фото */
+.home-why--signal::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -2 !important;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 6, 7, 0.18),
+            rgba(5, 6, 7, 0.5)
+        ) !important;
+    pointer-events: none !important;
+}
+
+/* легкая сетка поверх фото */
+.home-why--signal::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -1 !important;
+    opacity: 0.13 !important;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px) !important;
+    background-size: 58px 58px !important;
+    mask-image: radial-gradient(circle at 52% 48%, black, transparent 78%) !important;
+    pointer-events: none !important;
+}
+
+/* чтобы контент был выше overlays */
+.home-why--signal .home-container {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* верхний текст читабельнее */
+.home-why--signal .home-why-signal__top h2 {
+    color: var(--color-white) !important;
+    text-shadow: 0 18px 44px rgba(0, 0, 0, 0.42) !important;
+}
+
+.home-why--signal .home-why-signal__top > p,
+.home-why--signal .home-why-signal__statement p,
+.home-why--signal .home-why-signal__list p {
+    color: rgba(255, 255, 255, 0.72) !important;
+}
+
+/* блоки внутри чуть стекляннее на фото */
+.home-why--signal .home-why-signal__statement,
+.home-why--signal .home-why-signal__list li,
+.home-why--signal .home-why-signal__core {
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.045)),
+        rgba(5, 6, 7, 0.34) !important;
+    border-color: rgba(255, 255, 255, 0.14) !important;
+    backdrop-filter: blur(18px) !important;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.24) !important;
+}
+
+.home-why--signal .home-why-signal__list strong {
+    color: var(--color-white) !important;
+}
+
+/* на мобилке фон затемняем сильнее */
+@media (max-width: 760px) {
+    .home-why--signal {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(5, 6, 7, 0.94),
+                rgba(5, 6, 7, 0.82)
+            ),
+            radial-gradient(circle at 18% 24%, rgba(31, 195, 190, 0.22), transparent 20rem),
+            radial-gradient(circle at 90% 78%, rgba(228, 104, 22, 0.18), transparent 22rem),
+            url("../images/home/stats-bg.jpg") center / cover no-repeat !important;
+    }
+}
