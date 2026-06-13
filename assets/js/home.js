@@ -417,7 +417,6 @@
         });
     };
 
-
     const setupPopularServicesSlider = () => {
         const slider = document.querySelector('[data-popular-slider]');
         const track = document.querySelector('[data-popular-track]');
@@ -426,49 +425,58 @@
 
         if (!slider || !track || !prevButton || !nextButton) return;
 
-        const originalCards = Number(track.dataset.originalCards || 12);
+        const firstSet = track.querySelector('.home-popular-set');
+
+        if (!firstSet) return;
+
         const rows = 2;
+        const originalCards = Number(track.dataset.originalCards || 8);
         const originalColumns = Math.ceil(originalCards / rows);
 
         let activeColumn = 0;
         let columnStep = 0;
-        let autoplayTimer = null;
-        let pointerStartX = 0;
-        let pointerCurrentX = 0;
-        let isDragging = false;
-
-        const setMetrics = () => {
-            const firstCard = track.querySelector('.home-popular-card');
-            if (!firstCard) return;
-
-            const trackStyles = window.getComputedStyle(track);
-            const gap = parseFloat(trackStyles.columnGap || trackStyles.gap || 0);
-
-            columnStep = firstCard.getBoundingClientRect().width + gap;
-            setPosition(false);
-        };
+        let isAnimating = false;
 
         const setPosition = (animate = true) => {
             track.style.transition = animate
-                ? 'transform 420ms cubic-bezier(.22, 1, .36, 1)'
+                ? 'transform 430ms cubic-bezier(.22, 1, .36, 1)'
                 : 'none';
 
             track.style.transform = `translate3d(${-activeColumn * columnStep}px, 0, 0)`;
         };
 
+        const setMetrics = () => {
+            const setWidth = firstSet.getBoundingClientRect().width;
+
+            if (!setWidth) return;
+
+            columnStep = setWidth / originalColumns;
+
+            setPosition(false);
+        };
+
         const nextSlide = () => {
+            if (isAnimating) return;
+
+            isAnimating = true;
             activeColumn += 1;
             setPosition(true);
         };
 
         const prevSlide = () => {
+            if (isAnimating) return;
+
+            isAnimating = true;
+
             if (activeColumn <= 0) {
                 activeColumn = originalColumns;
                 setPosition(false);
 
                 requestAnimationFrame(() => {
-                    activeColumn = originalColumns - 1;
-                    setPosition(true);
+                    requestAnimationFrame(() => {
+                        activeColumn = originalColumns - 1;
+                        setPosition(true);
+                    });
                 });
 
                 return;
@@ -478,87 +486,26 @@
             setPosition(true);
         };
 
-        const startAutoplay = () => {
-            stopAutoplay();
-            autoplayTimer = window.setInterval(nextSlide, 2800);
-        };
+        track.addEventListener('transitionend', (event) => {
+            if (event.propertyName !== 'transform') return;
 
-        const stopAutoplay = () => {
-            if (!autoplayTimer) return;
-
-            window.clearInterval(autoplayTimer);
-            autoplayTimer = null;
-        };
-
-        track.addEventListener('transitionend', () => {
             if (activeColumn >= originalColumns) {
                 activeColumn = 0;
                 setPosition(false);
             }
+
+            isAnimating = false;
         });
 
-        nextButton.addEventListener('click', () => {
-            stopAutoplay();
-            nextSlide();
-            startAutoplay();
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+
+        window.addEventListener('resize', () => {
+            setMetrics();
         });
-
-        prevButton.addEventListener('click', () => {
-            stopAutoplay();
-            prevSlide();
-            startAutoplay();
-        });
-
-        slider.addEventListener('pointerenter', stopAutoplay);
-        slider.addEventListener('pointerleave', startAutoplay);
-        slider.addEventListener('focusin', stopAutoplay);
-        slider.addEventListener('focusout', startAutoplay);
-
-        slider.addEventListener('pointerdown', (event) => {
-            isDragging = true;
-            pointerStartX = event.clientX;
-            pointerCurrentX = event.clientX;
-            stopAutoplay();
-
-            slider.setPointerCapture?.(event.pointerId);
-        });
-
-        slider.addEventListener('pointermove', (event) => {
-            if (!isDragging) return;
-
-            pointerCurrentX = event.clientX;
-        });
-
-        slider.addEventListener('pointerup', (event) => {
-            if (!isDragging) return;
-
-            isDragging = false;
-
-            const distance = pointerCurrentX - pointerStartX;
-
-            if (Math.abs(distance) > 44) {
-                if (distance < 0) {
-                    nextSlide();
-                } else {
-                    prevSlide();
-                }
-            }
-
-            slider.releasePointerCapture?.(event.pointerId);
-            startAutoplay();
-        });
-
-        slider.addEventListener('pointercancel', () => {
-            isDragging = false;
-            startAutoplay();
-        });
-
-        window.addEventListener('resize', setMetrics);
 
         setMetrics();
-        startAutoplay();
     };
-
 
 
     const setupHashOnLoad = () => {
