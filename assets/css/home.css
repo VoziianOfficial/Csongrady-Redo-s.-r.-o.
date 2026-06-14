@@ -9088,3 +9088,75 @@ html {
             url("../images/home/stats-bg.jpg") center / cover no-repeat !important;
     }
 }
+
+/* =====================================
+   HOME MOBILE MENU — above header fix
+===================================== */
+
+.home-mobile-menu {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 5000 !important;
+    width: 100% !important;
+    height: 100dvh !important;
+    padding: 14px !important;
+    display: grid !important;
+    place-items: center !important;
+    overflow: hidden !important;
+}
+
+.home-mobile-menu.is-open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+/* чтобы панель не залезала под хедер и нормально скроллилась */
+.home-mobile-menu__panel {
+    position: relative !important;
+    z-index: 5001 !important;
+    width: min(100%, 760px) !important;
+    max-height: calc(100dvh - 28px) !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain !important;
+}
+
+/* верхняя часть меню всегда видна */
+.home-mobile-menu__top {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 20 !important;
+    backdrop-filter: blur(18px) !important;
+}
+
+/* кнопка закрытия точно поверх всего */
+.home-mobile-menu__close {
+    position: relative !important;
+    z-index: 30 !important;
+    flex: 0 0 auto !important;
+    pointer-events: auto !important;
+}
+
+/* хедер ниже открытого меню */
+body.is-menu-open .home-header,
+body.is-menu-open header {
+    z-index: 1000 !important;
+}
+
+/* на маленьких экранах меню почти на весь экран */
+@media (max-width: 680px) {
+    .home-mobile-menu {
+        padding: 10px !important;
+        align-items: start !important;
+    }
+
+    .home-mobile-menu__panel {
+        width: 100% !important;
+        max-height: calc(100dvh - 20px) !important;
+        border-radius: 26px !important;
+    }
+
+    .home-mobile-menu__top {
+        padding-bottom: 14px !important;
+    }
+}
