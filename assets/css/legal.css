@@ -1884,3 +1884,69 @@ body.is-menu-open header {
         min-height: auto !important;
     }
 }
+
+/* =====================================
+   BURGER ICON — perfect center fix
+===================================== */
+
+.home-burger,
+.service-burger,
+.legal-burger {
+    position: relative !important;
+    display: grid !important;
+    place-items: center !important;
+    flex: 0 0 auto !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+.home-burger span,
+.service-burger span,
+.legal-burger span {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 19px !important;
+    height: 2px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 999px !important;
+    background: var(--color-white) !important;
+    transform-origin: center !important;
+}
+
+/* верхняя линия */
+.home-burger span:first-child,
+.service-burger span:first-child,
+.legal-burger span:first-child {
+    transform: translate(-50%, calc(-50% - 4px)) !important;
+}
+
+/* нижняя линия */
+.home-burger span:last-child,
+.service-burger span:last-child,
+.legal-burger span:last-child {
+    transform: translate(-50%, calc(-50% + 4px)) !important;
+}
+
+/* чтобы на маленьких кнопках тоже было ровно */
+@media (max-width: 460px) {
+
+    .home-burger span,
+    .service-burger span,
+    .legal-burger span {
+        width: 18px !important;
+    }
+
+    .home-burger span:first-child,
+    .service-burger span:first-child,
+    .legal-burger span:first-child {
+        transform: translate(-50%, calc(-50% - 3.5px)) !important;
+    }
+
+    .home-burger span:last-child,
+    .service-burger span:last-child,
+    .legal-burger span:last-child {
+        transform: translate(-50%, calc(-50% + 3.5px)) !important;
+    }
+}
