@@ -3999,7 +3999,12 @@ html {
 
 .service-matters__image {
     position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    justify-self: stretch !important;
     min-height: 600px !important;
+    aspect-ratio: 1448 / 1086 !important;
     border-radius: 34px !important;
     overflow: hidden !important;
     background: rgba(255, 255, 255, 0.03) !important;
@@ -4034,7 +4039,10 @@ html {
     inset: 0 !important;
     width: 100% !important;
     height: 100% !important;
+    display: block !important;
     object-fit: cover !important;
+    object-position: center center !important;
+    z-index: 1 !important;
     border-radius: 34px !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.34) !important;
@@ -4215,8 +4223,11 @@ html {
     }
 
     .service-matters__image {
-        min-height: 500px !important;
+        width: 100% !important;
         max-width: 760px !important;
+        min-width: 0 !important;
+        min-height: 500px !important;
+        aspect-ratio: 1448 / 1086 !important;
         margin-inline: auto !important;
     }
 
@@ -4264,7 +4275,11 @@ html {
     }
 
     .service-matters__image {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
         min-height: 360px !important;
+        aspect-ratio: 4 / 3 !important;
         border-radius: 24px !important;
     }
 
