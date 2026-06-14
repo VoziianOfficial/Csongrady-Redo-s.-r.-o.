@@ -226,6 +226,104 @@
         if (!accordion) return;
 
         const items = [...accordion.querySelectorAll('.service-faq-item')];
+        const animations = new WeakMap();
+
+        const animationOptions = {
+            duration: 380,
+            easing: 'cubic-bezier(.22, 1, .36, 1)'
+        };
+
+        const stopAnimation = (content) => {
+            const currentAnimation = animations.get(content);
+
+            if (currentAnimation) {
+                currentAnimation.cancel();
+                animations.delete(content);
+            }
+        };
+
+        const closeItem = (item) => {
+            const button = item.querySelector('button');
+            const content = item.querySelector('.service-faq-item__content');
+
+            if (!button || !content || !item.classList.contains('is-active')) return;
+
+            stopAnimation(content);
+
+            const startHeight = content.scrollHeight;
+
+            content.style.height = `${startHeight}px`;
+            content.style.overflow = 'hidden';
+
+            item.classList.add('is-closing');
+            button.setAttribute('aria-expanded', 'false');
+
+            const animation = content.animate(
+                [
+                    { height: `${startHeight}px` },
+                    { height: '0px' }
+                ],
+                animationOptions
+            );
+
+            animations.set(content, animation);
+
+            animation.onfinish = () => {
+                item.classList.remove('is-active');
+                item.classList.remove('is-closing');
+
+                content.style.height = '0px';
+                content.style.overflow = 'hidden';
+
+                animations.delete(content);
+            };
+
+            animation.oncancel = () => {
+                animations.delete(content);
+            };
+        };
+
+        const openItem = (item) => {
+            const button = item.querySelector('button');
+            const content = item.querySelector('.service-faq-item__content');
+
+            if (!button || !content || item.classList.contains('is-active')) return;
+
+            stopAnimation(content);
+
+            item.classList.add('is-active');
+            item.classList.remove('is-closing');
+
+            content.style.height = '0px';
+            content.style.overflow = 'hidden';
+
+            const endHeight = content.scrollHeight;
+
+            button.setAttribute('aria-expanded', 'true');
+
+            const animation = content.animate(
+                [
+                    { height: '0px' },
+                    { height: `${endHeight}px` }
+                ],
+                animationOptions
+            );
+
+            animations.set(content, animation);
+
+            animation.onfinish = () => {
+                if (!item.classList.contains('is-active')) return;
+
+                content.style.height = 'auto';
+                content.style.overflow = 'visible';
+
+                animations.delete(content);
+            };
+
+            animation.oncancel = () => {
+                animations.delete(content);
+            };
+        };
 
         items.forEach((item, index) => {
             const button = item.querySelector('button');
@@ -240,26 +338,31 @@
             content.setAttribute('role', 'region');
             content.setAttribute('aria-labelledby', button.id);
 
+            if (item.classList.contains('is-active')) {
+                content.style.height = 'auto';
+                content.style.overflow = 'visible';
+                button.setAttribute('aria-expanded', 'true');
+            } else {
+                content.style.height = '0px';
+                content.style.overflow = 'hidden';
+                button.setAttribute('aria-expanded', 'false');
+            }
+
             button.addEventListener('click', () => {
-                const isActive = item.classList.contains('is-active');
+                const isOpen = item.classList.contains('is-active');
+
+                if (isOpen) {
+                    closeItem(item);
+                    return;
+                }
 
                 items.forEach((otherItem) => {
-                    const otherButton = otherItem.querySelector('button');
-
-                    otherItem.classList.remove('is-active');
-
-                    if (otherButton) {
-                        otherButton.setAttribute('aria-expanded', 'false');
+                    if (otherItem !== item) {
+                        closeItem(otherItem);
                     }
                 });
 
-                if (!isActive) {
-                    item.classList.add('is-active');
-                    button.setAttribute('aria-expanded', 'true');
-                } else {
-                    item.classList.add('is-active');
-                    button.setAttribute('aria-expanded', 'true');
-                }
+                openItem(item);
             });
         });
     };

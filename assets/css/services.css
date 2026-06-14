@@ -3569,3 +3569,58 @@ html {
         padding: 0 14px 16px 46px !important;
     }
 }
+
+/* FAQ closing fix — keep text visible while height closes */
+
+.service-faq-item__content,
+.service-faq-item__content p {
+    opacity: 1 !important;
+}
+
+.service-faq-item.is-closing .service-faq-item__content,
+.service-faq-item.is-closing .service-faq-item__content p {
+    opacity: 1 !important;
+}
+
+/* FINAL FAQ FIX — text closes together with the item */
+
+.service-faq--switchboard .service-faq-item {
+    transition:
+        min-height 380ms cubic-bezier(.22, 1, .36, 1),
+        background 240ms ease,
+        border-color 240ms ease !important;
+}
+
+/* убираем старую max-height логику, чтобы JS управлял высотой */
+.service-faq--switchboard .service-faq-item__content {
+    display: block !important;
+    height: 0;
+    max-height: none !important;
+    overflow: hidden !important;
+    opacity: 1 !important;
+    transition: none !important;
+    will-change: height !important;
+}
+
+.service-faq--switchboard .service-faq-item.is-active .service-faq-item__content {
+    max-height: none !important;
+}
+
+/* главное: при закрытии активный item сразу перестает быть высоким */
+.service-faq--switchboard .service-faq-item.is-active.is-closing {
+    min-height: 72px !important;
+    grid-row: auto !important;
+}
+
+/* текст не исчезает отдельно */
+.service-faq--switchboard .service-faq-item__content p,
+.service-faq--switchboard .service-faq-item.is-closing .service-faq-item__content p {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+/* чтобы плюс не дергался */
+.service-faq--switchboard .service-faq-item.is-closing button strong {
+    transform: rotate(0deg) !important;
+}
