@@ -108,7 +108,7 @@ button {
     transform: translateY(0);
 }
 
-/* Header */
+
 
 .legal-header {
     position: sticky;
@@ -353,7 +353,7 @@ button {
     transform: translateY(4px);
 }
 
-/* Mobile menu */
+
 
 .legal-mobile-menu {
     position: fixed;
@@ -495,7 +495,7 @@ button {
     box-shadow: var(--shadow-mint);
 }
 
-/* Hero */
+
 
 .legal-hero {
     position: relative;
@@ -631,7 +631,7 @@ button {
     font-weight: 800;
 }
 
-/* Legal content */
+
 
 .legal-content-section {
     padding: 82px 0 96px;
@@ -848,7 +848,7 @@ button {
     width: fit-content;
 }
 
-/* Footer */
+
 
 .legal-footer {
     padding: 64px 0 26px;
@@ -933,7 +933,7 @@ button {
     font-weight: 700;
 }
 
-/* Cookie */
+
 
 .legal-cookie {
     position: fixed;
@@ -1014,7 +1014,7 @@ button {
     background: var(--gradient-mint);
 }
 
-/* Focus */
+
 
 a:focus-visible,
 button:focus-visible {
@@ -1022,7 +1022,7 @@ button:focus-visible {
     outline-offset: 3px;
 }
 
-/* Responsive */
+
 
 @media (max-width: 1180px) {
     .legal-header__inner {
@@ -1333,7 +1333,7 @@ button:focus-visible {
     }
 }
 
-/* Fixed sticky header fix */
+
 
 .legal-header {
     position: fixed !important;
@@ -1364,7 +1364,7 @@ html {
     }
 }
 
-/* Remove header background on scroll */
+
 
 .legal-header,
 .legal-header.is-scrolled {
@@ -1385,9 +1385,7 @@ html {
     box-shadow: var(--shadow-dark) !important;
 }
 
-/* =====================================
-   LEGAL MOBILE MENU — above header fix
-===================================== */
+
 
 .legal-mobile-menu {
     position: fixed !important;
@@ -1452,11 +1450,9 @@ body.is-menu-open header {
     }
 }
 
-/* =====================================
-   LEGAL PAGES — juicy premium upgrade
-===================================== */
 
-/* whole legal hero becomes more alive */
+
+
 .legal-hero {
     position: relative !important;
     isolation: isolate !important;
@@ -1490,7 +1486,7 @@ body.is-menu-open header {
     pointer-events: none !important;
 }
 
-/* hero layout */
+
 .legal-hero__grid {
     align-items: center !important;
     gap: clamp(34px, 5vw, 70px) !important;
@@ -1512,7 +1508,7 @@ body.is-menu-open header {
     color: rgba(215, 220, 224, 0.76) !important;
 }
 
-/* hero meta pills */
+
 .legal-hero__meta span {
     position: relative !important;
     overflow: hidden !important;
@@ -1532,7 +1528,7 @@ body.is-menu-open header {
     border-color: rgba(99, 227, 219, 0.36) !important;
 }
 
-/* company details card — richer */
+
 .legal-hero__card {
     border-radius: 34px !important;
     border-color: rgba(255, 255, 255, 0.15) !important;
@@ -1568,7 +1564,7 @@ body.is-menu-open header {
     color: var(--color-orange-light) !important;
 }
 
-/* content section — cleaner, premium */
+
 .legal-content-section {
     padding: 74px 0 92px !important;
     background:
@@ -1577,7 +1573,7 @@ body.is-menu-open header {
         linear-gradient(180deg, #FAF9F6 0%, #F3F1EA 100%) !important;
 }
 
-/* side navigation — more alive */
+
 .legal-side-nav {
     padding: 18px !important;
     border-radius: 28px !important;
@@ -1627,7 +1623,7 @@ body.is-menu-open header {
     transform: translateY(-50%) scale(1) !important;
 }
 
-/* legal blocks — juicy but readable */
+
 .legal-document {
     gap: 16px !important;
 }
@@ -1683,7 +1679,7 @@ body.is-menu-open header {
     opacity: 0.9 !important;
 }
 
-/* numbers — less boring */
+
 .legal-block__number {
     width: 48px !important;
     height: 48px !important;
@@ -1716,7 +1712,7 @@ body.is-menu-open header {
     color: rgba(5, 6, 7, 0.64) !important;
 }
 
-/* bullet list becomes more designed */
+
 .legal-block li {
     padding-left: 26px !important;
 }
@@ -1734,7 +1730,7 @@ body.is-menu-open header {
     box-shadow: 0 0 16px rgba(228, 104, 22, 0.28) !important;
 }
 
-/* mini grid */
+
 .legal-mini-grid {
     gap: 12px !important;
 }
@@ -1764,7 +1760,7 @@ body.is-menu-open header {
     border-color: rgba(31, 195, 190, 0.24) !important;
 }
 
-/* contact card */
+
 .legal-contact-card {
     border-radius: 24px !important;
     background:
@@ -1784,7 +1780,7 @@ body.is-menu-open header {
     color: var(--color-carrot) !important;
 }
 
-/* footer a bit richer */
+
 .legal-footer__brand,
 .legal-footer__column {
     transition:
@@ -1802,7 +1798,7 @@ body.is-menu-open header {
         rgba(255, 255, 255, 0.055) !important;
 }
 
-/* tablet */
+
 @media (max-width: 1180px) {
     .legal-side-nav {
         grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
@@ -1824,7 +1820,7 @@ body.is-menu-open header {
     }
 }
 
-/* mobile */
+
 @media (max-width: 680px) {
     .legal-hero {
         padding-top: 138px !important;

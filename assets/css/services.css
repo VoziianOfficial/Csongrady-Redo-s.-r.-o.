@@ -234,7 +234,7 @@ button {
     box-shadow: 0 18px 45px rgba(31, 195, 190, 0.16);
 }
 
-/* Header */
+
 
 .service-header {
     position: sticky;
@@ -453,7 +453,7 @@ button {
     transform: translateY(4px);
 }
 
-/* Mobile menu */
+
 
 .service-mobile-menu {
     position: fixed;
@@ -605,7 +605,7 @@ button {
     box-shadow: var(--shadow-mint);
 }
 
-/* Hero */
+
 
 .service-hero {
     position: relative;
@@ -860,7 +860,7 @@ button {
     height: 92%;
 }
 
-/* Intro */
+
 
 .service-intro {
     padding: 76px 0;
@@ -977,7 +977,7 @@ button {
     font-size: 0.93rem;
 }
 
-/* Includes */
+
 
 .service-includes {
     padding: 92px 0;
@@ -1074,7 +1074,7 @@ button {
     background: var(--gradient-orange);
 }
 
-/* Matters */
+
 
 .service-matters {
     padding: 92px 0;
@@ -1168,7 +1168,7 @@ button {
     box-shadow: 0 15px 40px rgba(5, 6, 7, 0.07);
 }
 
-/* Process */
+
 
 .service-process {
     padding: 82px 0;
@@ -1256,7 +1256,7 @@ button {
     font-size: 0.9rem;
 }
 
-/* Results */
+
 
 .service-results {
     padding: 92px 0;
@@ -1322,7 +1322,7 @@ button {
     font-weight: 800;
 }
 
-/* Related */
+
 
 .service-related {
     padding: 92px 0;
@@ -1431,7 +1431,7 @@ button {
     background: var(--gradient-mint);
 }
 
-/* FAQ */
+
 
 .service-faq {
     padding: 92px 0;
@@ -1521,7 +1521,7 @@ button {
     color: rgba(5, 6, 7, 0.62);
 }
 
-/* Final CTA */
+
 
 .service-final-cta {
     padding: 86px 0;
@@ -1549,7 +1549,7 @@ button {
     max-width: 720px;
 }
 
-/* Footer */
+
 
 .service-footer {
     padding: 64px 0 26px;
@@ -1634,7 +1634,7 @@ button {
     font-weight: 700;
 }
 
-/* Cookie */
+
 
 .service-cookie {
     position: fixed;
@@ -1715,7 +1715,7 @@ button {
     background: var(--gradient-mint);
 }
 
-/* Focus */
+
 
 a:focus-visible,
 button:focus-visible,
@@ -1726,7 +1726,7 @@ textarea:focus-visible {
     outline-offset: 3px;
 }
 
-/* Responsive */
+
 
 @media (max-width: 1180px) {
     .service-header__inner {
@@ -2118,7 +2118,7 @@ textarea:focus-visible {
     height: 68px;
 }
 
-/* Bigger logo text + smaller gap */
+
 
 
 .service-logo__text {
@@ -2180,7 +2180,7 @@ textarea:focus-visible {
     }
 }
 
-/* Fixed sticky header fix */
+
 
 .service-header {
     position: fixed !important;
@@ -2211,7 +2211,7 @@ html {
     }
 }
 
-/* Remove header background on scroll */
+
 
 .service-header,
 .service-header.is-scrolled {
@@ -2232,9 +2232,7 @@ html {
     box-shadow: var(--shadow-dark) !important;
 }
 
-/* ================================
-   SERVICE HERO — full bleed, no card
-================================ */
+
 
 .service-hero {
     position: relative;
@@ -2244,7 +2242,7 @@ html {
     background: #050607;
 }
 
-/* убираем контейнерные отступы только у hero */
+
 .service-hero>.service-container {
     width: 100%;
     max-width: none;
@@ -2252,7 +2250,7 @@ html {
     padding: 0;
 }
 
-/* НЕ карточка: без radius, без shadow, на всю ширину */
+
 .service-hero__panel {
     width: 100%;
     min-height: 560px;
@@ -2265,7 +2263,7 @@ html {
     box-shadow: none;
 }
 
-/* левая часть — фото до края экрана */
+
 .service-hero__media {
     position: relative;
     min-height: 560px;
@@ -2328,7 +2326,7 @@ html {
     box-shadow: 0 0 22px rgba(99, 227, 219, 0.8);
 }
 
-/* правая часть — тоже до края экрана */
+
 .service-hero__content {
     position: relative;
     min-height: 560px;
@@ -2344,7 +2342,7 @@ html {
     text-align: left;
 }
 
-/* маленький акцент, не рамка карточки */
+
 .service-hero__content::before {
     content: "";
     position: absolute;
@@ -2432,7 +2430,7 @@ html {
     pointer-events: none;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .service-hero {
         padding-top: 100px;
@@ -2466,7 +2464,7 @@ html {
     }
 }
 
-/* mobile */
+
 @media (max-width: 560px) {
     .service-hero {
         padding-top: 92px;
@@ -2523,7 +2521,7 @@ html {
     }
 }
 
-/* Service pages header — full width square version */
+
 
 .service-header {
     position: fixed !important;
@@ -2546,7 +2544,7 @@ html {
     box-shadow: 0 18px 48px rgba(0, 0, 0, 0.34) !important;
 }
 
-/* сам inner больше не карточка/пилюля */
+
 .service-header__inner {
     width: 100% !important;
     max-width: none !important;
@@ -2560,7 +2558,7 @@ html {
     backdrop-filter: none !important;
 }
 
-/* навигацию оставляем аккуратной, но не такой круглой */
+
 .service-nav {
     border-radius: 16px !important;
     background: rgba(255, 255, 255, 0.055) !important;
@@ -2571,18 +2569,18 @@ html {
     border-radius: 12px !important;
 }
 
-/* кнопка справа в стиле хедера */
+
 .service-header__cta {
     min-height: 46px !important;
     border-radius: 14px !important;
 }
 
-/* бургер тоже квадратнее */
+
 .service-burger {
     border-radius: 14px !important;
 }
 
-/* чтобы hero начинался сразу после нового хедера */
+
 .service-hero {
     padding-top: 82px !important;
 }
@@ -2609,13 +2607,13 @@ html {
     }
 }
 
-/* Service intro — compact cards with right icons */
+
 
 .service-intro {
     padding: 64px 0 !important;
 }
 
-/* заголовок меньше и шире */
+
 .service-intro .service-section-heading {
     max-width: 620px !important;
 }
@@ -2633,7 +2631,7 @@ html {
     line-height: 1.5 !important;
 }
 
-/* сетка компактнее */
+
 .service-intro__grid {
     align-items: center !important;
     gap: 42px !important;
@@ -2643,7 +2641,7 @@ html {
     gap: 14px !important;
 }
 
-/* карточки ниже */
+
 .service-intro-card {
     position: relative !important;
     min-height: 138px !important;
@@ -2663,7 +2661,7 @@ html {
         background 260ms ease !important;
 }
 
-/* светящийся слой на hover */
+
 .service-intro-card::before {
     content: "" !important;
     position: absolute !important;
@@ -2677,7 +2675,7 @@ html {
     pointer-events: none !important;
 }
 
-/* нижняя цветная линия */
+
 .service-intro-card::after {
     content: "" !important;
     position: absolute !important;
@@ -2712,7 +2710,7 @@ html {
     transform: scaleX(1) !important;
 }
 
-/* контент поверх glow */
+
 .service-intro-card h3,
 .service-intro-card p,
 .service-intro-card .service-line-icon {
@@ -2720,7 +2718,7 @@ html {
     z-index: 3 !important;
 }
 
-/* иконка справа сверху */
+
 .service-intro-card .service-line-icon {
     position: absolute !important;
     top: 18px !important;
@@ -2761,7 +2759,7 @@ html {
     transform: translateY(-4px) rotate(6deg) scale(1.04) !important;
 }
 
-/* текст компактнее */
+
 .service-intro-card h3 {
     margin: 0 !important;
     max-width: 260px !important;
@@ -2778,7 +2776,7 @@ html {
     line-height: 1.38 !important;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .service-intro {
         padding: 56px 0 !important;
@@ -2810,7 +2808,7 @@ html {
     }
 }
 
-/* mobile */
+
 @media (max-width: 560px) {
     .service-intro {
         padding: 46px 0 !important;
@@ -2850,9 +2848,7 @@ html {
 }
 
 
-/* =========================================
-   SERVICE INCLUDES — editorial split section
-========================================= */
+
 
 .service-includes--editorial {
     position: relative;
@@ -2989,7 +2985,7 @@ html {
     line-height: 1.2;
 }
 
-/* right visual */
+
 .service-includes-editorial__visual {
     width: 100%;
 }
@@ -3071,7 +3067,7 @@ html {
     font-weight: 800;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .service-includes--editorial {
         padding: 64px 0 68px;
@@ -3106,7 +3102,7 @@ html {
     }
 }
 
-/* mobile */
+
 @media (max-width: 560px) {
     .service-includes--editorial {
         padding: 50px 0 54px;
@@ -3157,9 +3153,7 @@ html {
     }
 }
 
-/* =====================================
-   SERVICE FAQ — white switchboard accordion
-===================================== */
+
 
 .service-faq--switchboard {
     position: relative !important;
@@ -3218,7 +3212,7 @@ html {
     line-height: 1.48 !important;
 }
 
-/* board */
+
 .service-faq-switch__board {
     counter-reset: faq-switch !important;
     display: grid !important;
@@ -3233,7 +3227,7 @@ html {
     box-shadow: 0 24px 70px rgba(5, 6, 7, 0.1) !important;
 }
 
-/* item */
+
 .service-faq--switchboard .service-faq-item {
     counter-increment: faq-switch !important;
     position: relative !important;
@@ -3307,7 +3301,7 @@ html {
     transform: scaleY(1) !important;
 }
 
-/* button */
+
 .service-faq--switchboard .service-faq-item button {
     position: relative !important;
     z-index: 2 !important;
@@ -3367,7 +3361,7 @@ html {
     border-radius: 999px !important;
 }
 
-/* content */
+
 .service-faq--switchboard .service-faq-item__content {
     position: relative !important;
     z-index: 2 !important;
@@ -3388,7 +3382,7 @@ html {
     line-height: 1.45 !important;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .service-faq--switchboard {
         padding: 52px 0 56px !important;
@@ -3420,7 +3414,7 @@ html {
     }
 }
 
-/* mobile */
+
 @media (max-width: 560px) {
     .service-faq--switchboard {
         padding: 44px 0 48px !important;
@@ -3466,7 +3460,7 @@ html {
     }
 }
 
-/* FAQ switchboard — no card container */
+
 
 .service-faq-switch__board {
     padding: 0 !important;
@@ -3479,7 +3473,7 @@ html {
     border-bottom: 1px solid rgba(5, 6, 7, 0.14) !important;
 }
 
-/* убираем ощущение отдельных карточек */
+
 .service-faq--switchboard .service-faq-item {
     min-height: 72px !important;
     border: 0 !important;
@@ -3498,7 +3492,7 @@ html {
     border-bottom: 0 !important;
 }
 
-/* hover не карточка, а легкое подсвечивание строки */
+
 .service-faq--switchboard .service-faq-item:hover {
     transform: none !important;
     background:
@@ -3509,7 +3503,7 @@ html {
     box-shadow: none !important;
 }
 
-/* активный вопрос — не карточка, а раскрытая панель с акцентом */
+
 .service-faq--switchboard .service-faq-item.is-active {
     min-height: 150px !important;
     border-color: rgba(5, 6, 7, 0.12) !important;
@@ -3521,18 +3515,18 @@ html {
     box-shadow: none !important;
 }
 
-/* цветная вертикальная линия остается как фишка */
+
 .service-faq--switchboard .service-faq-item::after {
     width: 5px !important;
 }
 
-/* кнопка чище */
+
 .service-faq--switchboard .service-faq-item button {
     min-height: 72px !important;
     padding: 18px 18px 18px 56px !important;
 }
 
-/* плюсик чуть легче, чтобы не выглядел как кнопка-карточка */
+
 .service-faq--switchboard .service-faq-item button strong {
     width: 32px !important;
     height: 32px !important;
@@ -3540,12 +3534,12 @@ html {
     box-shadow: none !important;
 }
 
-/* текст раскрытия */
+
 .service-faq--switchboard .service-faq-item__content p {
     padding: 0 56px 22px 56px !important;
 }
 
-/* tablet/mobile */
+
 @media (max-width: 980px) {
     .service-faq--switchboard .service-faq-item:nth-child(odd) {
         border-right: 0 !important;
@@ -3570,7 +3564,7 @@ html {
     }
 }
 
-/* FAQ closing fix — keep text visible while height closes */
+
 
 .service-faq-item__content,
 .service-faq-item__content p {
@@ -3582,7 +3576,7 @@ html {
     opacity: 1 !important;
 }
 
-/* FINAL FAQ FIX — text closes together with the item */
+
 
 .service-faq--switchboard .service-faq-item {
     transition:
@@ -3591,7 +3585,7 @@ html {
         border-color 240ms ease !important;
 }
 
-/* убираем старую max-height логику, чтобы JS управлял высотой */
+
 .service-faq--switchboard .service-faq-item__content {
     display: block !important;
     height: 0;
@@ -3606,13 +3600,13 @@ html {
     max-height: none !important;
 }
 
-/* главное: при закрытии активный item сразу перестает быть высоким */
+
 .service-faq--switchboard .service-faq-item.is-active.is-closing {
     min-height: 72px !important;
     grid-row: auto !important;
 }
 
-/* текст не исчезает отдельно */
+
 .service-faq--switchboard .service-faq-item__content p,
 .service-faq--switchboard .service-faq-item.is-closing .service-faq-item__content p {
     opacity: 1 !important;
@@ -3620,14 +3614,12 @@ html {
     transition: none !important;
 }
 
-/* чтобы плюс не дергался */
+
 .service-faq--switchboard .service-faq-item.is-closing button strong {
     transform: rotate(0deg) !important;
 }
 
-/* =====================================
-   SERVICE PROCESS — white signal flow
-===================================== */
+
 
 .service-process--signal-flow {
     position: relative !important;
@@ -3687,7 +3679,7 @@ html {
     line-height: 1.48 !important;
 }
 
-/* timeline */
+
 .service-process-flow__timeline {
     position: relative !important;
     display: grid !important;
@@ -3696,7 +3688,7 @@ html {
     padding: 18px 0 0 !important;
 }
 
-/* main flowing line */
+
 .service-process-flow__timeline::before {
     content: "" !important;
     position: absolute !important;
@@ -3718,7 +3710,7 @@ html {
         0 0 30px rgba(228, 104, 22, 0.14) !important;
 }
 
-/* remove old card feeling */
+
 .service-process--signal-flow .service-process-step {
     position: relative !important;
     z-index: 2 !important;
@@ -3748,7 +3740,7 @@ html {
     box-shadow: none !important;
 }
 
-/* icons instead of numbers */
+
 .service-process--signal-flow .service-process-step__icon {
     position: relative !important;
     z-index: 3 !important;
@@ -3802,7 +3794,7 @@ html {
     transform: rotate(7deg) scale(1.07) !important;
 }
 
-/* text */
+
 .service-process--signal-flow .service-process-step h3 {
     max-width: 250px !important;
     margin: 0 !important;
@@ -3821,7 +3813,7 @@ html {
     line-height: 1.42 !important;
 }
 
-/* small hover underline */
+
 .service-process--signal-flow .service-process-step div {
     position: relative !important;
     padding-top: 4px !important;
@@ -3849,7 +3841,7 @@ html {
     transform: scaleX(1) !important;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .service-process--signal-flow {
         padding: 54px 0 58px !important;
@@ -3908,7 +3900,7 @@ html {
     }
 }
 
-/* mobile */
+
 @media (max-width: 560px) {
     .service-process--signal-flow {
         padding: 46px 0 50px !important;
@@ -3969,9 +3961,7 @@ html {
     }
 }
 
-/* =====================================
-   SERVICE MATTERS — like reference, dark
-===================================== */
+
 
 .service-matters {
     position: relative !important;
@@ -4006,7 +3996,7 @@ html {
     gap: clamp(36px, 5vw, 64px) !important;
 }
 
-/* left image side */
+
 .service-matters__image {
     position: relative !important;
     min-height: 600px !important;
@@ -4055,7 +4045,7 @@ html {
     transform: scale(1.035) !important;
 }
 
-/* little decorative dots like in reference */
+
 .service-matters__image .service-matters__badge::before {
     content: "" !important;
     position: absolute !important;
@@ -4081,7 +4071,7 @@ html {
     transform: translateY(-50%) !important;
 }
 
-/* floating card on image */
+
 .service-matters__badge {
     position: absolute !important;
     left: 50% !important;
@@ -4117,7 +4107,7 @@ html {
     line-height: 1.35 !important;
 }
 
-/* right content side */
+
 .service-matters__content {
     max-width: 760px !important;
 }
@@ -4147,7 +4137,7 @@ html {
     line-height: 1.56 !important;
 }
 
-/* pills */
+
 .service-matters__points {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -4213,7 +4203,7 @@ html {
     border-color: rgba(255, 190, 122, 0.32) !important;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .service-matters {
         padding: 66px 0 72px !important;
@@ -4257,7 +4247,7 @@ html {
     }
 }
 
-/* mobile */
+
 @media (max-width: 680px) {
     .service-matters__points {
         grid-template-columns: 1fr !important;
@@ -4327,9 +4317,7 @@ html {
 }
 
 
-/* =====================================
-   SERVICE FINAL CTA — wow signal bar
-===================================== */
+
 
 .service-final-cta {
     position: relative !important;
@@ -4396,7 +4384,7 @@ html {
     backdrop-filter: blur(18px) !important;
 }
 
-/* colored edge */
+
 .service-final-cta__inner::before {
     content: "" !important;
     position: absolute !important;
@@ -4415,7 +4403,7 @@ html {
         0 0 28px rgba(255, 190, 122, 0.22) !important;
 }
 
-/* glowing corner dots */
+
 .service-final-cta__inner::after {
     content: "" !important;
     position: absolute !important;
@@ -4437,7 +4425,7 @@ html {
     max-width: 850px !important;
 }
 
-/* small slash mark */
+
 .service-final-cta__inner>div::before {
     content: "" !important;
     position: absolute !important;
@@ -4514,7 +4502,7 @@ html {
     transform: scale(1) !important;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .service-final-cta {
         padding: 48px 0 52px !important;
@@ -4552,7 +4540,7 @@ html {
     }
 }
 
-/* mobile */
+
 @media (max-width: 560px) {
     .service-final-cta {
         padding: 40px 0 44px !important;
@@ -4595,9 +4583,7 @@ html {
     }
 }
 
-/* =====================================
-   SERVICE FIT — dark horizontal rail
-===================================== */
+
 
 .service-fit--dark-rail {
     position: relative !important;
@@ -4648,7 +4634,7 @@ html {
     border-bottom: 1px solid rgba(255, 255, 255, 0.13) !important;
 }
 
-/* cards */
+
 .service-fit-dark-card {
     position: relative !important;
     min-height: 236px !important;
@@ -4724,7 +4710,7 @@ html {
     transform: scaleX(1) !important;
 }
 
-/* icons */
+
 .service-fit-dark-card__icon {
     position: absolute !important;
     top: 22px !important;
@@ -4776,7 +4762,7 @@ html {
     stroke-linejoin: round !important;
 }
 
-/* text */
+
 .service-fit-dark-card h3,
 .service-fit-dark-card p {
     position: relative !important;
@@ -4801,7 +4787,7 @@ html {
     line-height: 1.34 !important;
 }
 
-/* tablet */
+
 @media (max-width: 1180px) {
     .service-fit-dark__rail {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -4826,7 +4812,7 @@ html {
     }
 }
 
-/* small tablet */
+
 @media (max-width: 760px) {
     .service-fit--dark-rail {
         padding: 48px 0 52px !important;
@@ -4851,7 +4837,7 @@ html {
     }
 }
 
-/* mobile */
+
 @media (max-width: 520px) {
     .service-fit--dark-rail {
         padding: 42px 0 46px !important;
@@ -4921,9 +4907,7 @@ html {
     }
 }
 
-/* =====================================
-   FIT STRIP — clean premium horizontal
-===================================== */
+
 
 .fit-strip {
     position: relative !important;
@@ -5032,7 +5016,7 @@ html {
     transform: scaleX(1) !important;
 }
 
-/* icon */
+
 .fit-strip-item__icon {
     position: relative !important;
     z-index: 2 !important;
@@ -5082,7 +5066,7 @@ html {
     stroke-linejoin: round !important;
 }
 
-/* text */
+
 .fit-strip-item h3,
 .fit-strip-item p {
     position: relative !important;
@@ -5106,7 +5090,7 @@ html {
     line-height: 1.28 !important;
 }
 
-/* tablet */
+
 @media (max-width: 1180px) {
     .fit-strip__rail {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -5130,7 +5114,7 @@ html {
     }
 }
 
-/* small tablet */
+
 @media (max-width: 760px) {
     .fit-strip {
         padding: 38px 0 !important;
@@ -5155,7 +5139,7 @@ html {
     }
 }
 
-/* mobile */
+
 @media (max-width: 520px) {
     .fit-strip {
         padding: 32px 0 !important;
@@ -5219,11 +5203,9 @@ html {
 }
 
 
-/* =====================================
-   FIT STRIP — clean colored line icons
-===================================== */
 
-/* убираем фон у иконок полностью */
+
+
 .fit-strip-item__icon {
     position: relative !important;
     z-index: 2 !important;
@@ -5241,7 +5223,7 @@ html {
         filter 260ms ease !important;
 }
 
-/* маленькая светящаяся точка возле иконки */
+
 .fit-strip-item__icon::before {
     content: "" !important;
     position: absolute !important;
@@ -5255,7 +5237,7 @@ html {
     opacity: 0.85 !important;
 }
 
-/* тонкая нижняя черта под иконкой */
+
 .fit-strip-item__icon::after {
     content: "" !important;
     position: absolute !important;
@@ -5288,7 +5270,7 @@ html {
     stroke-linejoin: round !important;
 }
 
-/* разные цвета иконок */
+
 .fit-strip-item:nth-child(1) .fit-strip-item__icon {
     color: #63E3DB !important;
 }
@@ -5313,7 +5295,7 @@ html {
     color: #F6C65B !important;
 }
 
-/* hover — иконка становится живее */
+
 .fit-strip-item:hover .fit-strip-item__icon {
     transform: translateY(-4px) rotate(-5deg) scale(1.08) !important;
     filter: brightness(1.14) !important;
@@ -5327,13 +5309,13 @@ html {
     transform: scaleX(1) !important;
 }
 
-/* убираем старый orange background, если он перебивает */
+
 .fit-strip-item--orange .fit-strip-item__icon {
     background: transparent !important;
     box-shadow: none !important;
 }
 
-/* на мобилке иконки чуть компактнее */
+
 @media (max-width: 520px) {
     .fit-strip-item__icon {
         width: 40px !important;
@@ -5351,9 +5333,7 @@ html {
     }
 }
 
-/* =====================================
-   FIT STRIP — mobile horizontal swipe row
-===================================== */
+
 
 @media (max-width: 620px) {
     .fit-strip {
@@ -5479,9 +5459,7 @@ html {
     }
 }
 
-/* =====================================
-   FIT STRIP — mobile text alignment fix
-===================================== */
+
 
 @media (max-width: 620px) {
 
@@ -5564,9 +5542,7 @@ html {
     }
 }
 
-/* =====================================
-   SERVICE HERO — swap blocks on tablet/mobile
-===================================== */
+
 
 @media (max-width: 980px) {
     .service-hero__panel {
@@ -5593,9 +5569,7 @@ html {
     }
 }
 
-/* =====================================
-   SERVICE MOBILE MENU — above header fix
-===================================== */
+
 
 .service-mobile-menu {
     position: fixed !important;

@@ -286,7 +286,7 @@ button {
     transform: scaleX(1);
 }
 
-/* Header */
+
 
 .home-header {
     position: sticky;
@@ -496,7 +496,7 @@ button {
     transform: translateY(4px);
 }
 
-/* Mobile menu */
+
 
 .home-mobile-menu {
     position: fixed;
@@ -644,7 +644,7 @@ button {
     box-shadow: var(--shadow-mint);
 }
 
-/* Hero */
+
 
 .home-hero {
     position: relative;
@@ -927,7 +927,7 @@ button {
     box-shadow: 0 0 20px rgba(99, 227, 219, 0.85);
 }
 
-/* Services intro */
+
 
 .home-services-intro {
     padding: 74px 0;
@@ -1031,7 +1031,7 @@ button {
     font-size: 0.93rem;
 }
 
-/* Popular services */
+
 
 .home-popular-services {
     padding: 92px 0;
@@ -1209,7 +1209,7 @@ button {
     background: var(--gradient-orange);
 }
 
-/* About */
+
 
 .home-about {
     padding: 92px 0;
@@ -1328,7 +1328,7 @@ button {
     box-shadow: 0 15px 40px rgba(5, 6, 7, 0.07);
 }
 
-/* Why */
+
 
 .home-why {
     padding: 92px 0;
@@ -1465,7 +1465,7 @@ button {
     font-size: 0.92rem;
 }
 
-/* Stats */
+
 
 .home-stats {
     position: relative;
@@ -1561,7 +1561,7 @@ button {
     font-weight: 800;
 }
 
-/* Process */
+
 
 .home-process {
     padding: 82px 0;
@@ -1661,7 +1661,7 @@ button {
     font-size: 0.9rem;
 }
 
-/* Promo */
+
 
 .home-promo {
     padding: 84px 0;
@@ -1824,7 +1824,7 @@ button {
     height: 68%;
 }
 
-/* Standout */
+
 
 .home-standout {
     padding: 92px 0;
@@ -1953,7 +1953,7 @@ button {
     border-radius: 34px;
 }
 
-/* Testimonials */
+
 
 .home-testimonials {
     padding: 84px 0;
@@ -2092,7 +2092,7 @@ button {
     font-weight: 700;
 }
 
-/* Contact */
+
 
 .home-contact {
     padding: 92px 0;
@@ -2221,7 +2221,7 @@ button {
     color: #118f62;
 }
 
-/* Footer */
+
 
 .home-footer {
     padding: 64px 0 26px;
@@ -2306,7 +2306,7 @@ button {
     font-weight: 700;
 }
 
-/* Cookie */
+
 
 .home-cookie {
     position: fixed;
@@ -2387,7 +2387,7 @@ button {
     background: var(--gradient-mint);
 }
 
-/* Focus */
+
 
 a:focus-visible,
 button:focus-visible,
@@ -2398,7 +2398,7 @@ textarea:focus-visible {
     outline-offset: 3px;
 }
 
-/* Responsive */
+
 
 @media (max-width: 1180px) {
     .home-header__inner {
@@ -2862,7 +2862,7 @@ textarea:focus-visible {
     }
 }
 
-/* Clean logo icon without background */
+
 
 .home-logo,
 .home-mobile-logo,
@@ -2932,7 +2932,7 @@ textarea:focus-visible {
     }
 }
 
-/* Bigger logo text + smaller gap */
+
 
 
 
@@ -2995,7 +2995,7 @@ textarea:focus-visible {
     }
 }
 
-/* Fixed sticky header fix */
+
 
 .home-header {
     position: fixed !important;
@@ -3026,7 +3026,7 @@ html {
     }
 }
 
-/* Remove header background on scroll */
+
 
 .home-header,
 .home-header.is-scrolled {
@@ -3047,7 +3047,7 @@ html {
     box-shadow: var(--shadow-dark) !important;
 }
 
-/* Hero section like reference image */
+
 
 .home-hero {
     position: relative !important;
@@ -3347,7 +3347,7 @@ html {
     }
 }
 
-/* Hero buttons in one row */
+
 
 .home-hero__actions {
     display: flex !important;
@@ -3411,7 +3411,7 @@ html {
     }
 }
 
-/* Juicy marquee section after hero */
+
 
 .home-marquee-section {
     position: relative;
@@ -3677,7 +3677,7 @@ html {
     }
 }
 
-/* Perfect infinite marquee fix */
+
 
 .home-marquee {
     position: relative !important;
@@ -3774,7 +3774,7 @@ html {
     }
 }
 
-/* Clickable marquee cards with juicy hover */
+
 
 .home-marquee__group a {
     position: relative;
@@ -3883,7 +3883,7 @@ html {
     outline-offset: 4px;
 }
 
-/* hide old span styles if they remain somewhere */
+
 .home-marquee__track>span {
     display: none !important;
 }
@@ -3916,7 +3916,7 @@ html {
     }
 }
 
-/* Clean black icon strip — only large icons */
+
 
 .home-icon-strip {
     position: relative !important;
@@ -4060,7 +4060,7 @@ html {
     }
 }
 
-/* Services intro cards: smaller height, right icons, stronger hover */
+
 
 .home-services-intro {
     padding: 58px 0 !important;
@@ -4269,7 +4269,7 @@ html {
     }
 }
 
-/* Services intro heading smaller */
+
 
 .home-services-intro .home-section-heading h2 {
     font-size: clamp(1.8rem, 3.2vw, 3.35rem) !important;
@@ -4283,7 +4283,7 @@ html {
     }
 }
 
-/* Popular Services — exact dark two-row swiper style */
+
 
 .home-popular-services {
     position: relative !important;
@@ -4629,7 +4629,7 @@ html {
     }
 }
 
-/* Popular Services — exactly 8 visible tiles like reference */
+
 
 .home-popular-services {
     position: relative !important;
@@ -4951,7 +4951,7 @@ html {
     }
 }
 
-/* Popular Services: taller tiles + fuller text cards */
+
 
 .home-popular-set {
     --popular-tile-height: clamp(172px, 16.8vw, 218px) !important;
@@ -5037,7 +5037,7 @@ html {
     }
 }
 
-/* Popular services: buttons only, no autoplay */
+
 
 .home-popular-track {
     animation: none !important;
@@ -5077,7 +5077,7 @@ html {
     box-shadow: 0 18px 38px rgba(31, 195, 190, 0.22) !important;
 }
 
-/* Popular services: disable auto movement, only buttons */
+
 
 .home-popular-track {
     animation: none !important;
@@ -5087,7 +5087,7 @@ html {
     animation-play-state: unset !important;
 }
 
-/* Popular slider fix: no empty gap, buttons only */
+
 
 .home-popular-track {
     display: flex !important;
@@ -5106,7 +5106,7 @@ html {
     animation-play-state: unset !important;
 }
 
-/* New WOW why section — black, bright, no photos, no cards, no numbers */
+
 
 .home-why--signal {
     position: relative !important;
@@ -5505,7 +5505,7 @@ html {
     }
 }
 
-/* Why signal section refinements */
+
 
 .home-why-signal__top {
     grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.55fr) !important;
@@ -5524,7 +5524,7 @@ html {
     max-width: 440px !important;
 }
 
-/* поднять светящуюся линию выше */
+
 .home-why-signal__stage::before {
     top: 35% !important;
     left: 18% !important;
@@ -5532,7 +5532,7 @@ html {
     height: 2px !important;
 }
 
-/* сам круг — живой, вращается и реагирует на hover */
+
 .home-why-signal__core {
     cursor: pointer;
     animation: homeWhyCoreFloat 7s ease-in-out infinite;
@@ -5644,7 +5644,7 @@ html {
     font-size: 0.95rem !important;
 }
 
-/* core сам не должен прыгать/увеличиваться на hover */
+
 .home-why-signal__core {
     cursor: default !important;
     animation: homeWhyCoreSoftRotate 14s ease-in-out infinite !important;
@@ -5661,7 +5661,7 @@ html {
         rgba(255, 255, 255, 0.025) !important;
 }
 
-/* hover только на круговые линии */
+
 .home-why-signal__core::before,
 .home-why-signal__core::after {
     pointer-events: auto !important;
@@ -5690,7 +5690,7 @@ html {
     animation-duration: 3s !important;
 }
 
-/* текст внутри не меняется на hover всего блока */
+
 .home-why-signal__core:hover strong {
     color: var(--color-mint-light) !important;
     text-shadow: 0 0 34px rgba(99, 227, 219, 0.42) !important;
@@ -5704,7 +5704,7 @@ html {
     color: var(--color-orange-light) !important;
 }
 
-/* мягкое движение самого круга без hover-прыжка */
+
 @keyframes homeWhyCoreSoftRotate {
     0% {
         transform: rotate(0deg);
@@ -5730,7 +5730,7 @@ html {
     }
 }
 
-/* Testimonials — seamless full-section design, no card container */
+
 
 .home-testimonials {
     position: relative !important;
@@ -6073,7 +6073,7 @@ html {
     }
 }
 
-/* Testimonials fix: content should not be cut on sides */
+
 
 .home-testimonials {
     overflow: hidden !important;
@@ -6102,19 +6102,19 @@ html {
     overflow-wrap: break-word !important;
 }
 
-/* чтобы огромная кавычка не резала контент */
+
 .home-testimonials__slider::before {
     left: 0 !important;
     max-width: 100% !important;
     pointer-events: none !important;
 }
 
-/* чтобы декоративный круг справа не вылезал слишком далеко */
+
 .home-testimonials__slider::after {
     right: 2% !important;
 }
 
-/* на мобилке убираем боковой сдвиг, чтобы всё было ровно */
+
 @media (max-width: 920px) {
     .home-testimonials__slider {
         padding-left: 0 !important;
@@ -6138,7 +6138,7 @@ html {
     }
 }
 
-/* Testimonials: smaller section + brighter quote holder */
+
 
 .home-testimonials {
     overflow: visible !important;
@@ -6169,12 +6169,12 @@ html {
     padding-right: clamp(14px, 2.2vw, 28px) !important;
 }
 
-/* убираем старую кавычку, которая была внутри slider */
+
 .home-testimonials__slider::before {
     display: none !important;
 }
 
-/* декоративную окружность тоже делаем спокойнее, чтобы секция была ниже */
+
 .home-testimonials__slider::after {
     width: 118px !important;
     height: 118px !important;
@@ -6189,7 +6189,7 @@ html {
     padding-top: 34px !important;
 }
 
-/* новая большая яркая кавычка сверху, как держатель секции */
+
 .home-testimonial::before {
     content: "“";
     position: absolute;
@@ -6233,7 +6233,7 @@ html {
     height: 42px !important;
 }
 
-/* чтобы кавычка реально выглядела между секциями */
+
 .home-testimonials {
     margin-top: 24px !important;
 }
@@ -6303,7 +6303,7 @@ html {
     }
 }
 
-/* Testimonials mobile — cleaner premium version */
+
 
 @media (max-width: 720px) {
     .home-testimonials {
@@ -6493,7 +6493,7 @@ html {
     }
 }
 
-/* Testimonials mobile: controls top-right, title lower */
+
 
 @media (max-width: 720px) {
     .home-testimonials__heading {
@@ -6542,7 +6542,7 @@ html {
     }
 }
 
-/* About section visual + benefits polish */
+
 
 .home-about__visual {
     --about-photo-radius: 18px;
@@ -6565,7 +6565,7 @@ html {
         0 0 0 1px rgba(255, 255, 255, 0.38) inset !important;
 }
 
-/* внутренняя светлая рамка повторяет форму фото */
+
 .home-about__visual::after {
     content: "" !important;
     position: absolute !important;
@@ -6576,7 +6576,7 @@ html {
     pointer-events: none !important;
 }
 
-/* линия теперь в правом верхнем углу и повторяет закругление */
+
 .home-about__line {
     position: absolute !important;
     top: 18px !important;
@@ -6620,7 +6620,7 @@ html {
     box-shadow: 0 0 22px rgba(255, 190, 122, 0.65);
 }
 
-/* бейдж чуть аккуратнее под новое фото */
+
 .home-about__badge {
     right: 22px !important;
     bottom: 22px !important;
@@ -6628,7 +6628,7 @@ html {
     border-radius: 16px !important;
 }
 
-/* Benefits: ниже по высоте, сочнее и с hover */
+
 .home-about__benefits {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -6698,7 +6698,7 @@ html {
     box-shadow: 0 0 26px rgba(99, 227, 219, 0.75);
 }
 
-/* кнопка About — в стиле перехода к системе */
+
 .home-about .home-btn--dark {
     min-height: 46px !important;
     padding: 0 22px !important;
@@ -6767,7 +6767,7 @@ html {
     }
 }
 
-/* About benefits: one row on tablet and mobile */
+
 
 @media (max-width: 920px) {
     .home-about__benefits {
@@ -6827,7 +6827,7 @@ html {
     }
 }
 
-/* Process — white flow section, no cards, bright accents */
+
 
 .home-process--flow {
     position: relative !important;
@@ -7179,7 +7179,7 @@ html {
     }
 }
 
-/* Process heading: smaller and wider */
+
 
 .home-process-flow__top {
     grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.5fr) !important;
@@ -7219,7 +7219,7 @@ html {
     }
 }
 
-/* Home stats: reduce top padding by half */
+
 
 .home-stats {
     padding-top: 46px !important;
@@ -7237,7 +7237,7 @@ html {
     }
 }
 
-/* Standout system — white, unusual, bright accents, no photo cards */
+
 
 .home-standout--system {
     position: relative !important;
@@ -7350,7 +7350,7 @@ html {
     pointer-events: none;
 }
 
-/* Accordion rows — no cards */
+
 
 .home-standout--system .home-standout__accordion {
     position: relative;
@@ -7490,7 +7490,7 @@ html {
     padding-bottom: 22px !important;
 }
 
-/* Right visual system — no images */
+
 
 .home-standout-system__visual {
     position: relative;
@@ -7703,7 +7703,7 @@ html {
 }
 
 
-/* Standout visual: replace orbit with round photo */
+
 
 .home-standout-system__visual {
     position: relative !important;
@@ -7864,7 +7864,7 @@ html {
     }
 }
 
-/* Standout section — cleaner tablet/mobile layout + non-round photo */
+
 
 @media (max-width: 980px) {
     .home-standout--system {
@@ -7901,7 +7901,7 @@ html {
         display: none !important;
     }
 
-    /* сначала фото, потом аккордеон можно поменять если хочешь */
+    
     .home-standout-system__visual {
         order: 1 !important;
         min-height: auto !important;
@@ -7911,7 +7911,7 @@ html {
         order: 2 !important;
     }
 
-    /* фото больше не круглое */
+    
     .home-standout-system__photo-wrap {
         width: 100% !important;
         max-width: 560px !important;
@@ -7929,7 +7929,7 @@ html {
             0 0 0 1px rgba(31, 195, 190, 0.08) !important;
     }
 
-    /* кольца тоже не круглые, а под форму фото */
+    
     .home-standout-system__ring {
         border-radius: 32px !important;
     }
@@ -7969,7 +7969,7 @@ html {
         font-size: 0.67rem !important;
     }
 
-    /* accordion аккуратнее */
+    
     .home-standout--system .home-standout-item button {
         min-height: 60px !important;
         gap: 14px !important;
@@ -8049,12 +8049,12 @@ html {
         line-height: 1 !important;
     }
 
-    /* один бейдж можно скрыть чтобы не перегружать */
+    
     .home-standout-system__photo-badge--orange {
         display: none !important;
     }
 
-    /* если чипсов много — делаем компактнее */
+    
     .home-standout-system__rail {
         margin-top: 12px !important;
         gap: 6px !important;
@@ -8065,8 +8065,8 @@ html {
         font-size: 0.62rem !important;
     }
 
-    /* если все равно шумно — можешь раскомментировать это */
-    /* .home-standout-system__rail { display: none !important; } */
+    
+    
 
     .home-standout--system .home-standout-item button {
         min-height: 54px !important;
@@ -8108,7 +8108,7 @@ html {
     }
 }
 
-/* Standout accordion — no CSS height transition conflicts */
+
 
 .home-standout-item__content,
 .home-standout--system .home-standout-item__content {
@@ -8173,7 +8173,7 @@ html {
         padding: 0 0 14px 0 !important;
     }
 }
-/* Creative direction layer — no cards, no fake graphs */
+
 
 .home-direction-layer {
     position: relative;
@@ -8504,7 +8504,7 @@ html {
     }
 }
 
-/* Direction layer: smaller heading + one-line rows */
+
 
 .home-direction-layer__top {
     grid-template-columns: 180px minmax(0, 1fr) !important;
@@ -8519,7 +8519,7 @@ html {
     letter-spacing: -0.078em !important;
 }
 
-/* rows теперь одна стильная горизонтальная линия */
+
 .home-direction-layer__rows {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -8601,7 +8601,7 @@ html {
     transform: translateY(-4px) !important;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .home-direction-layer__top {
         grid-template-columns: 1fr !important;
@@ -8636,7 +8636,7 @@ html {
     }
 }
 
-/* mobile: остаётся в одну строку, но компактно */
+
 @media (max-width: 640px) {
     .home-direction-layer__top h2 {
         font-size: clamp(1.75rem, 8.8vw, 2.55rem) !important;
@@ -8682,7 +8682,7 @@ html {
     }
 }
 
-/* Dark compact services CTA */
+
 
 .home-services-cta {
     position: relative;
@@ -8840,14 +8840,14 @@ html {
     }
 }
 
-/* Services CTA — clean black version */
+
 
 .home-services-cta {
     background: #050607 !important;
     padding: 42px 0 !important;
 }
 
-/* убираем засветления/сетку */
+
 .home-services-cta::before {
     display: none !important;
     content: none !important;
@@ -8866,7 +8866,7 @@ html {
         0 0 28px rgba(228, 104, 22, 0.14) !important;
 }
 
-/* слово SERVICES — меньше, ярче, но не огромное */
+
 .home-services-cta__word {
     right: 26px !important;
     bottom: 18px !important;
@@ -8875,7 +8875,7 @@ html {
     letter-spacing: -0.09em !important;
 }
 
-/* чтобы контент был выше слова */
+
 .home-services-cta__inner {
     z-index: 3 !important;
 }
@@ -8903,7 +8903,7 @@ html {
     }
 }
 
-/* Global tablet/mobile H2 alignment */
+
 
 @media (max-width: 980px) {
 
@@ -8995,7 +8995,7 @@ html {
     }
 }
 
-/* Why section — background photo through CSS */
+
 
 .home-why--signal {
     position: relative !important;
@@ -9013,7 +9013,7 @@ html {
         url("../images/home/stats-bg.jpg") center / cover no-repeat !important;
 }
 
-/* мягкая затемняющая вуаль поверх фото */
+
 .home-why--signal::before {
     content: "" !important;
     position: absolute !important;
@@ -9028,7 +9028,7 @@ html {
     pointer-events: none !important;
 }
 
-/* легкая сетка поверх фото */
+
 .home-why--signal::after {
     content: "" !important;
     position: absolute !important;
@@ -9043,13 +9043,13 @@ html {
     pointer-events: none !important;
 }
 
-/* чтобы контент был выше overlays */
+
 .home-why--signal .home-container {
     position: relative !important;
     z-index: 2 !important;
 }
 
-/* верхний текст читабельнее */
+
 .home-why--signal .home-why-signal__top h2 {
     color: var(--color-white) !important;
     text-shadow: 0 18px 44px rgba(0, 0, 0, 0.42) !important;
@@ -9061,7 +9061,7 @@ html {
     color: rgba(255, 255, 255, 0.72) !important;
 }
 
-/* блоки внутри чуть стекляннее на фото */
+
 .home-why--signal .home-why-signal__statement,
 .home-why--signal .home-why-signal__list li,
 .home-why--signal .home-why-signal__core {
@@ -9074,7 +9074,7 @@ html {
     color: var(--color-white) !important;
 }
 
-/* на мобилке фон затемняем сильнее */
+
 @media (max-width: 760px) {
     .home-why--signal {
         background:
@@ -9089,9 +9089,7 @@ html {
     }
 }
 
-/* =====================================
-   HOME MOBILE MENU — above header fix
-===================================== */
+
 
 .home-mobile-menu {
     position: fixed !important;
@@ -9111,7 +9109,7 @@ html {
     pointer-events: auto !important;
 }
 
-/* чтобы панель не залезала под хедер и нормально скроллилась */
+
 .home-mobile-menu__panel {
     position: relative !important;
     z-index: 5001 !important;
@@ -9121,7 +9119,7 @@ html {
     overscroll-behavior: contain !important;
 }
 
-/* верхняя часть меню всегда видна */
+
 .home-mobile-menu__top {
     position: sticky !important;
     top: 0 !important;
@@ -9129,7 +9127,7 @@ html {
     backdrop-filter: blur(18px) !important;
 }
 
-/* кнопка закрытия точно поверх всего */
+
 .home-mobile-menu__close {
     position: relative !important;
     z-index: 30 !important;
@@ -9137,13 +9135,13 @@ html {
     pointer-events: auto !important;
 }
 
-/* хедер ниже открытого меню */
+
 body.is-menu-open .home-header,
 body.is-menu-open header {
     z-index: 1000 !important;
 }
 
-/* на маленьких экранах меню почти на весь экран */
+
 @media (max-width: 680px) {
     .home-mobile-menu {
         padding: 10px !important;
