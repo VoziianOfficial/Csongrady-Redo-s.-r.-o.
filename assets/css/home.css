@@ -5341,6 +5341,7 @@ html {
     grid-template-columns: minmax(180px, 0.48fr) 1fr;
     gap: 24px;
     padding: 22px 0;
+    padding-left: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
 
@@ -9064,9 +9065,6 @@ html {
 .home-why--signal .home-why-signal__statement,
 .home-why--signal .home-why-signal__list li,
 .home-why--signal .home-why-signal__core {
-    background:
-        linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.045)),
-        rgba(5, 6, 7, 0.34) !important;
     border-color: rgba(255, 255, 255, 0.14) !important;
     backdrop-filter: blur(18px) !important;
     box-shadow: 0 22px 60px rgba(0, 0, 0, 0.24) !important;
