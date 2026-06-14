@@ -9171,9 +9171,6 @@ body.is-menu-open header {
     }
 }
 
-/* =====================================
-   BURGER ICON — perfect center fix
-===================================== */
 
 .home-burger,
 .service-burger,
@@ -9201,21 +9198,20 @@ body.is-menu-open header {
     transform-origin: center !important;
 }
 
-/* верхняя линия */
 .home-burger span:first-child,
 .service-burger span:first-child,
 .legal-burger span:first-child {
     transform: translate(-50%, calc(-50% - 4px)) !important;
 }
 
-/* нижняя линия */
+
 .home-burger span:last-child,
 .service-burger span:last-child,
 .legal-burger span:last-child {
     transform: translate(-50%, calc(-50% + 4px)) !important;
 }
 
-/* чтобы на маленьких кнопках тоже было ровно */
+
 @media (max-width: 460px) {
 
     .home-burger span,
