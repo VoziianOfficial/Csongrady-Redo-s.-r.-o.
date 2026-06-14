@@ -2194,7 +2194,8 @@ button {
 .home-contact-form textarea {
     min-height: 130px;
     padding: 15px 16px;
-    resize: vertical;
+    resize: none;
+    overflow: auto;
 }
 
 .home-contact-form input:focus,
